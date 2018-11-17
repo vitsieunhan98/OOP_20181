@@ -1,8 +1,8 @@
 package Entity;
 
-public class Person extends Entity {
+public class Event extends Entity {
 
-	public Person() {
+	public Event() {
 		// TODO Auto-generated constructor stub
 	}
 
