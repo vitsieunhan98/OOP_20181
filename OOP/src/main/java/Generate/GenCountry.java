@@ -1,15 +1,17 @@
 package Generate;
 
+import java.io.IOException;
+
 import Entity.*;
 
-public class GenCountry {
+public class GenCountry implements IGenerate<Country>{
 
 	public GenCountry() {
 		// TODO Auto-generated constructor stub
 	}
-
-	public Country generate() {
-		
-		return null;
+	
+	@Override
+	public Country generate() throws IOException {
+		return new Country(new Entity().getRandomId(), new Entity().getRandomDescription(4), new Entity().getRandomSource(), new Country().getRandomLabel());
 	}
 }

@@ -1,11 +1,13 @@
 package Generate;
 
+import java.io.IOException;
+
 import Entity.*;
 
-public class GenEntity {
+public class GenEntity implements IGenerate<Entity>{
 	
-	public Entity genEntity() {
-		int random = (int) (Math.random() * 6 + 0);
+	public Entity generate() throws IOException {
+		int random = (int) (Math.random() * 5 + 0);
 		
 		switch (random) {
 		case 0:

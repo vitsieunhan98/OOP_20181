@@ -1,14 +1,17 @@
 package Generate;
 
+import java.io.IOException;
+
 import Entity.*;
 
-public class GenOrganization {
+public class GenOrganization implements IGenerate<Organization>{
 
 	public GenOrganization() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Organization generate() {
-		return null;
+	@Override
+	public Organization generate() throws IOException {
+		return new Organization(new Entity().getRandomId(), new Entity().getRandomDescription(1), new Entity().getRandomSource(), new Organization().getRandomHeadquarter(), new Organization().getRandomLabel());
 	}
 }
