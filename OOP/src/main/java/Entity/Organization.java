@@ -11,8 +11,8 @@ import ReadFile.ReadFile;
 public class Organization extends Entity {
 	private String headquarter;
 	private String label;
-	private List<String> list_headquarter = new ArrayList<String>(new ReadFile().readFile("data"));
-	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data"));
+	private List<String> list_headquarter = new ArrayList<String>(new ReadFile().readFile("data/headquarter.txt"));
+	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/organizationLabel.txt"));
 	
 	public Organization() throws IOException {
 		super();

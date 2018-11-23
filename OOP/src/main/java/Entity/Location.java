@@ -10,7 +10,7 @@ import ReadFile.ReadFile;
 
 public class Location extends Entity {
 	private String label;
-	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data"));
+	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/locationLabel.txt"));
 	
 	public void setLabel(String label){
 		this.label = label;

@@ -12,7 +12,7 @@ public class Person extends Entity {
 	private String postion;
 	private String label;
 	private List<String> list_position = new ArrayList<String>(new ReadFile().readFile("data"));
-	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data"));
+	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/personLabel.txt"));
 	
 	public Person() throws IOException {
 		super();

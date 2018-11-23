@@ -10,7 +10,7 @@ import ReadFile.ReadFile;
 
 public class Country extends Entity {
 	private String label;
-	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data"));
+	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/countryLabel.txt"));
 	
 	public String getLabel() {
 		return label;

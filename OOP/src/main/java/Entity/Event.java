@@ -10,7 +10,7 @@ import ReadFile.ReadFile;
 
 public class Event extends Entity {
 	private String label;
-	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data"));
+	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/eventLabel.txt"));
 	
 	public String getLabel() {
 		return label;
