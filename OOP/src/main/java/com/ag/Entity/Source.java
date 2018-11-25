@@ -11,8 +11,8 @@ import com.ag.ReadFile.ReadFile;
 public class Source {
 	private String link;
 	private String time_extracted;
-	private List<String> list_link = new ArrayList<String>(new ReadFile().readFile("data"));
-	private List<String> list_time_extracted = new ArrayList<String>(new ReadFile().readFile("data"));
+	private List<String> list_link = new ArrayList<String>(new ReadFile().readFile("data/link.txt"));
+	private List<String> list_time_extracted = new ArrayList<String>(new ReadFile().readFile("data/timeExtracted.txt"));
 	
 	public String getLink() {
 		return link;

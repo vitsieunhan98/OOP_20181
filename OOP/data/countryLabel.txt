@@ -1,115 +1,106 @@
-Ả Rập Xê Út
-Afghanistan
-Ai Cập
+﻿Afghanistan
 Albania
 Algeria
-Ấn Độ
 Andorra
 Angola
-Anguilla
-Anh
-Antigua và Barbuda
-Antilles thuộc Hà Lan
-Áo
+Antigua & Deps
 Argentina
 Armenia
-Aruba
+Australia
+Austria
 Azerbaijan
-Ba Lan
 Bahamas
 Bahrain
 Bangladesh
 Barbados
-﻿Belarus
+Belarus
+Belgium
 Belize
-Bénin
-Bermuda
+Benin
 Bhutan
-Bỉ
-Bờ Biển Ngà
-Bồ Đào Nha
 Bolivia
-Bonaire
-Bosnia và Herzegovina
+Bosnia Herzegovina
 Botswana
 Brazil
 Brunei
 Bulgaria
-Burkina Faso
+Burkina
 Burundi
-Các tiểu vương quốc Ả Rập Thống nhất
+Cambodia
 Cameroon
-Campuchia
 Canada
 Cape Verde
+Central African Rep
 Chad
 Chile
+China
 Colombia
 Comoros
-Cộng hòa Congo
-Cộng hòa dân chủ Congo
-Cộng hòa Dominican
-Cộng hòa Séc
-Cộng hòa Trung Phi
+Congo
+Congo {Democratic Rep}
 Costa Rica
 Croatia
 Cuba
+Cyprus
+Czech Republic
+Denmark
 Djibouti
 Dominica
-Đài Loan
-Đan Mạch
-Đông Timor
-Đức
+Dominican Republic
+East Timor
 Ecuador
+Egypt
 El Salvador
+Equatorial Guinea
 Eritrea
-﻿Estonia
+Estonia
 Ethiopia
 Fiji
+Finland
+France
 Gabon
 Gambia
 Georgia
+Germany
 Ghana
+Greece
 Grenada
-Guadeloupe
-Guam
 Guatemala
-Guiana thuộc Pháp
 Guinea
-Guinea Xích đạo
 Guinea-Bissau
 Guyana
-Hà Lan
 Haiti
-Hàn Quốc
-Hoa Kỳ
 Honduras
 Hungary
-Hy Lạp
 Iceland
+India
 Indonesia
 Iran
 Iraq
-Ireland
+Ireland {Republic}
 Israel
+Italy
+Ivory Coast
 Jamaica
+Japan
 Jordan
 Kazakhstan
 Kenya
 Kiribati
+Korea North
+Korea South
+Kosovo
 Kuwait
 Kyrgyzstan
-Lào
+Laos
 Latvia
+Lebanon
 Lesotho
-Liban
 Liberia
 Libya
 Liechtenstein
-Liên bang Micronesia
 Lithuania
 Luxembourg
-Ma-rốc
 Macedonia
 Madagascar
 Malawi
@@ -117,109 +108,89 @@ Malaysia
 Maldives
 Mali
 Malta
-Martinique
+Marshall Islands
 Mauritania
 Mauritius
 Mexico
-﻿Moldova
+Micronesia
+Moldova
 Monaco
-Mông Cổ
+Mongolia
 Montenegro
-Montserrat
+Morocco
 Mozambique
-Myanmar
-Na Uy
-Nam Phi
-Nam Sudan
+Myanmar, {Burma}
 Namibia
 Nauru
 Nepal
-New Caledonia
+Netherlands
 New Zealand
-Nga
-Nhật Bản
 Nicaragua
 Niger
 Nigeria
+Norway
 Oman
 Pakistan
 Palau
-Palestine
 Panama
 Papua New Guinea
 Paraguay
 Peru
-Phần Lan
-Pháp
 Philippines
-Pitcairn
-Polynesia thuộc Pháp
-Puerto Rico
+Poland
+Portugal
 Qatar
-Quần đảo Bắc Mariana
-Quần đảo Cayman
-Quần đảo Falkland
-Quần đảo Marshall
-Quần đảo Nam Georgia và Nam Sandwich
-Quần đảo Solomon
-Quần đảo Turks và Caicos
-Quần đảo Virgin thuộc Anh
-Quần đảo Virgin thuộc Mỹ
-Réunion (Pháp)
 Romania
+Russian Federation
 Rwanda
-Saint Helena
-Saint Kitts và Nevis
-Saint Lucia
-Saint Martin
-Saint Pierre và Miquelon
-Saint Vincent và Grenadines
-Saint-Barthélemy
+St Kitts & Nevis
+St Lucia
+Saint Vincent & the Grenadines
 Samoa
-Samoa thuộc Mỹ
 San Marino
-São Tomé và Príncipe
+Sao Tome & Principe
+Saudi Arabia
 Senegal
 Serbia
 Seychelles
 Sierra Leone
 Singapore
-Sint Maarten
-Síp
 Slovakia
 Slovenia
+Solomon Islands
 Somalia
+South Africa
+South Sudan
+Spain
 Sri Lanka
 Sudan
 Suriname
 Swaziland
+Sweden
+Switzerland
 Syria
+Taiwan
 Tajikistan
 Tanzania
-Tây Ban Nha
-Tây Sahara
-Thái Lan
-Thành Vatican
-Thổ Nhĩ Kỳ
-Thụy Điển
-Thụy Sĩ
+Thailand
 Togo
 Tonga
-Triều Tiên
-Trinidad và Tobago
-Trung Quốc
+Trinidad & Tobago
 Tunisia
+Turkey
 Turkmenistan
 Tuvalu
-Úc
 Uganda
 Ukraine
+United Arab Emirates
+United Kingdom
+United States
 Uruguay
 Uzbekistan
 Vanuatu
+Vatican City
 Venezuela
-Việt Nam
-Ý
+Vietnam
 Yemen
 Zambia
 Zimbabwe

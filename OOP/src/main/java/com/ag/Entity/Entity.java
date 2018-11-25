@@ -12,6 +12,8 @@ public class Entity {
 	private List<String> list_id;
 	private List<String> list_description;
 	
+	private static int maxId = 1;
+	
 	public String getId() {
 		return id;
 	}
@@ -48,7 +50,9 @@ public class Entity {
 	}
 	
 	public String getRandomId() {
-		return "1";
+		String rs = Integer.toString(maxId);
+		maxId++;
+		return rs;
 	}
 	
 	public String getRandomDescription(int title) {

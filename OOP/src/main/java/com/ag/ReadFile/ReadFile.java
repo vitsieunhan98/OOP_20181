@@ -1,9 +1,9 @@
 package com.ag.ReadFile;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +15,7 @@ public class ReadFile {
 
 	public List<String> readFile(String path) throws IOException {
 		List<String> result = new ArrayList<String>();
-		FileInputStream fis = new FileInputStream(path);
-		InputStreamReader isr =  new InputStreamReader(fis);
-		BufferedReader bfr = new BufferedReader(isr);
+		BufferedReader bfr = new BufferedReader(new FileReader(path));
 		
 		String line = bfr.readLine();
 		while(line!=null) {
@@ -25,8 +23,6 @@ public class ReadFile {
 			line = bfr.readLine();
 		}
 		
-		fis.close();
-		isr.close();
 		bfr.close();
 		
 		return result;
