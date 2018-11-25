@@ -8,7 +8,7 @@ import com.franz.agraph.repository.AGRepository;
 import com.franz.agraph.repository.AGServer;
 
 public class ConnectDB {
-	private static final String SERVER_URL = "localhost/10035";
+	private static final String SERVER_URL = "http://localhost:10035";
 	private static final String CATALOG_ID = "";
 	private static final String REPOSITORY_ID = "oop";
 	private static final String USERNAME = "test";
