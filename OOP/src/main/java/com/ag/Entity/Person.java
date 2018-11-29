@@ -6,22 +6,20 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-import com.ag.ReadFile.ReadFile;
+import com.ag.HandleFile.ReadFile;
 
 public class Person extends Entity {
 	private String postion;
-	private String label;
-	private List<String> list_position = new ArrayList<String>(new ReadFile().readFile("data/personPosition.txt"));
-	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/personLabel.txt"));
+	private List<String> list_position = new ArrayList<String>(new ReadFile().readFile("data/person/personPosition.txt"));
+	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/person/personLabel.txt"));
 	
 	public Person() throws IOException {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Person(String id, String description, Source source, String postion, String label) throws IOException{
-		super(id, description, source);
+		super(id, description, source, label);
 		this.postion = postion;
-		this.label = label;
 	}
 	public String getPostion() {
 		return postion;
@@ -29,14 +27,6 @@ public class Person extends Entity {
 	
 	public void setPostion(String postion) {
 		this.postion = postion;
-	}
-	
-	public String getLabel() {
-		return label;
-	}
-	
-	public void setLabel(String label) {
-		this.label = label;
 	}
 	
 	public String getRandomPosition() {

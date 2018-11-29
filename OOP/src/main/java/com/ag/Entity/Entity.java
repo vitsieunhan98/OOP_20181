@@ -8,9 +8,7 @@ public class Entity {
 	protected String id;
 	protected String description;
 	protected Source source;
-	
-	private List<String> list_id;
-	private List<String> list_description;
+	protected String label;
 	
 	private static int maxId = 1;
 	
@@ -38,15 +36,24 @@ public class Entity {
 		this.source = source;
 	}
 	
+	public String getLabel() {
+		return label;
+	}
+	
+	public void setLabel(String label) {
+		this.label = label;
+	}
+	
 	public Entity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Entity( String id, String description, Source source) {
+	public Entity( String id, String description, Source source, String label) {
 		this.id = id;
 		this.description = description;
 		this.source = source;
+		this.label = label;
 	}
 	
 	public String getRandomId() {

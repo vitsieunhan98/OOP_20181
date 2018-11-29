@@ -23,7 +23,7 @@ public class CreatePersonIRI extends ConnectDB implements ICreateIRI<Person>{
 		AGRepository myRepo = connectDB();
 		ValueFactory f = myRepo.getValueFactory();
 		
-		IRI person = f.createIRI(PERSON.toString(), et.getId());
+		IRI person = f.createIRI(ENTITY.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());

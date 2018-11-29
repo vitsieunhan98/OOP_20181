@@ -22,7 +22,7 @@ public class CreateLocationIRI extends ConnectDB implements ICreateIRI<Location>
 		AGRepository myRepo = connectDB();
 		ValueFactory f = myRepo.getValueFactory();
 		
-		IRI location = f.createIRI(LOCATION.toString(), et.getId());
+		IRI location = f.createIRI(ENTITY.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());

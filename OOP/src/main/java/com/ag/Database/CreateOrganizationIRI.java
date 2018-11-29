@@ -22,7 +22,7 @@ public class CreateOrganizationIRI extends ConnectDB implements ICreateIRI<Organ
 		AGRepository myRepo = connectDB();
 		ValueFactory f = myRepo.getValueFactory();
 		
-		IRI organization = f.createIRI(ORGANIZATION.toString(), et.getId());
+		IRI organization = f.createIRI(ENTITY.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());

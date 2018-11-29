@@ -1,4 +1,4 @@
-package com.ag.ReadFile;
+package com.ag.HandleFile;
 
 import java.io.BufferedReader;
 import java.io.File;

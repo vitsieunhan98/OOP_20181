@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.ag.Entity.*;
-import com.ag.ReadFile.*;
+import com.ag.HandleFile.*;
 
 public class Relationship {
 	private String name;
@@ -15,8 +15,7 @@ public class Relationship {
 	private Entity entity2;
 	private String time;
 	private Source source;
-	private List<String> list_name = new ArrayList<String>(new ReadFile().readFile("data/relationshipName.txt"));
-	private List<String> list_time = new ArrayList<String>(new ReadFile().readFile("data/time.txt"));
+	private List<String> list_time = new ArrayList<String>(new ReadFile().readFile("data/relatioship/time.txt"));
 	
 	public String getName() {
 		return name;
@@ -69,12 +68,6 @@ public class Relationship {
 		this.entity2 = entity2;
 		this.time = time;
 		this.source = source;
-	}
-	
-	public String getRandomName() {
-		Random rd = new Random();
-		int index = rd.nextInt(list_name.size());
-		return list_name.get(index);
 	}
 	
 	public String getRandomTime() {

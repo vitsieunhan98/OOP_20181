@@ -6,13 +6,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-import com.ag.ReadFile.ReadFile;
+import com.ag.HandleFile.ReadFile;
 
 public class Source {
 	private String link;
 	private String time_extracted;
-	private List<String> list_link = new ArrayList<String>(new ReadFile().readFile("data/link.txt"));
-	private List<String> list_time_extracted = new ArrayList<String>(new ReadFile().readFile("data/timeExtracted.txt"));
+	private List<String> list_link = new ArrayList<String>(new ReadFile().readFile("data/source/link.txt"));
+	private List<String> list_time_extracted = new ArrayList<String>(new ReadFile().readFile("data/source/timeExtracted.txt"));
 	
 	public String getLink() {
 		return link;

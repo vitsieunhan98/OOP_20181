@@ -22,7 +22,7 @@ public class CreateEventIRI extends ConnectDB implements ICreateIRI<Event>{
 		AGRepository myRepo = connectDB();
 		ValueFactory f = myRepo.getValueFactory();
 		
-		IRI event = f.createIRI(EVENT.toString(), et.getId());
+		IRI event = f.createIRI(ENTITY.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());

@@ -24,6 +24,7 @@ public class ConnectDB {
 	protected IRI HEADQUARTER;
 	protected IRI TIME;
 	
+	protected IRI ENTITY;
 	protected IRI PERSON;
 	protected IRI COUNTRY;
 	protected IRI EVENT;
@@ -61,6 +62,7 @@ public class ConnectDB {
 		HEADQUARTER = f.createIRI(NAMESPACE, "headquarter");
 		TIME = f.createIRI(NAMESPACE, "time");
 		
+		ENTITY = f.createIRI(NAMESPACE, "Entity");
 		PERSON = f.createIRI(NAMESPACE, "Person");
 		COUNTRY = f.createIRI(NAMESPACE, "Country");
 		EVENT = f.createIRI(NAMESPACE, "Event");
@@ -119,6 +121,10 @@ public class ConnectDB {
 
 	public IRI getTIME() {
 		return TIME;
+	}
+
+	public IRI getENTITY() {
+		return ENTITY;
 	}
 	
 }

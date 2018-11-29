@@ -22,7 +22,7 @@ public class CreateCountryIRI extends ConnectDB implements ICreateIRI<Country>{
 		AGRepository myRepo = connectDB();
 		ValueFactory f = myRepo.getValueFactory();
 		
-		IRI country = f.createIRI(COUNTRY.toString(), et.getId());
+		IRI country = f.createIRI(ENTITY.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());

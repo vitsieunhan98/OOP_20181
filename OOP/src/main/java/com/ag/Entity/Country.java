@@ -6,19 +6,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-import com.ag.ReadFile.ReadFile;
+import com.ag.HandleFile.ReadFile;
 
 public class Country extends Entity {
-	private String label;
-	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/countryLabel.txt"));
-	
-	public String getLabel() {
-		return label;
-	}
-	
-	public void setLabel(String label) {
-		this.label = label;
-	}
+	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/country/countryLabel.txt"));
 	
 	public Country() throws IOException {
 		super();
@@ -26,8 +17,7 @@ public class Country extends Entity {
 	}
 
 	public Country(String id, String description, Source source, String label) throws IOException {
-		super(id, description, source);
-		this.label = label;
+		super(id, description, source, label);
 	}
 
 	public String getRandomLabel() {
