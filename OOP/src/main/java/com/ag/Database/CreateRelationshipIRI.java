@@ -3,6 +3,7 @@ package com.ag.Database;
 import java.io.IOException;
 
 import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
@@ -27,7 +28,11 @@ public class CreateRelationshipIRI extends ConnectDB {
 		
 		IRI relationship = f.createIRI(RELATIONSHIP.toString(), rel.getName());
 		
+		Literal time = f.createLiteral(rel.getTime());
+		
 		conn.add(et1, relationship, et2);
+		conn.add(relationship, WHEN, time);
+		conn.add(et1, et2, time);
 	}
 	
 }
