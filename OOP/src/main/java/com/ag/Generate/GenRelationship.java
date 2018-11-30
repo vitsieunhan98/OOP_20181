@@ -26,12 +26,16 @@ public class GenRelationship implements IGenerate<Relationship>{
 	@Override
 	public Relationship generate() throws IOException {
 		// TODO Auto-generated method stub
+		
 		Entity et1 = new GenEntity().generate();
 		Entity et2 = new GenEntity().generate();
-		
-		list_name = new ArrayList<String>(new ReadFile().readFile("data/relationship/" + et1.getClass().getSimpleName().toLowerCase() + et2.getClass().getSimpleName().toLowerCase() + ".txt"));
-		
-		return new Relationship(getRandomName(), et1, et2, new Relationship().getRandomTime(), new Entity().getRandomSource());
+		if(!et1.getClass().getSimpleName().equals(et2.getClass().getSimpleName())) {
+			list_name = new ArrayList<String>(new ReadFile().readFile("data/relationship/" + et1.getClass().getSimpleName().toLowerCase() + et2.getClass().getSimpleName().toLowerCase() + ".txt"));
+			
+			return new Relationship(getRandomName(), et1, et2, new Relationship().getRandomTime(), new Entity().getRandomSource());
+		}
+		else
+			return generate();
 	}
 
 }

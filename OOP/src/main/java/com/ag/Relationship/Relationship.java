@@ -15,7 +15,7 @@ public class Relationship {
 	private Entity entity2;
 	private String time;
 	private Source source;
-	private List<String> list_time = new ArrayList<String>(new ReadFile().readFile("data/relatioship/time.txt"));
+	private List<String> list_time = new ArrayList<String>(new ReadFile().readFile("data/relationship/time.txt"));
 	
 	public String getName() {
 		return name;

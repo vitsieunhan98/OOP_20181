@@ -19,55 +19,56 @@ public class Application {
 		
 		System.out.println("Start generating data");
 		
-		for (int i = 0; i < nentity.length; i++) {
-			atdb.addEntity(nentity[i]);
-			atdb.addRelationship(nrel[i]);
-			
-			String a = Integer.toString(i);
-			
-			Thread t1 = new Thread(a) {
-				public void run() {
-					try {
-						DoQuery.doQuery1(conn, a);
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-			};
-			Thread t2 = new Thread(a) {
-				public void run() {
-					try {
-						DoQuery.doQuery2(conn, a);
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-			};
-			Thread t3 = new Thread(a) {
-				public void run() {
-					try {
-						DoQuery.doQuery3(conn, a);
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-			};
-			
-			Thread t4 = new Thread(a) {
-				public void run() {
-					try {
-						DoQuery.doQuery4(conn, a);
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-			};
-		}
-		
+//		for (int i = 0; i < nentity.length; i++) {
+//			atdb.addEntity(nentity[i]);
+//			atdb.addRelationship(nrel[i]);
+//			
+//			String a = Integer.toString(i);
+//			
+//			Thread t1 = new Thread(a) {
+//				public void run() {
+//					try {
+//						DoQuery.doQuery1(conn, a);
+//					} catch (IOException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//				}
+//			};
+//			Thread t2 = new Thread(a) {
+//				public void run() {
+//					try {
+//						DoQuery.doQuery2(conn, a);
+//					} catch (IOException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//				}
+//			};
+//			Thread t3 = new Thread(a) {
+//				public void run() {
+//					try {
+//						DoQuery.doQuery3(conn, a);
+//					} catch (IOException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//				}
+//			};
+//			
+//			Thread t4 = new Thread(a) {
+//				public void run() {
+//					try {
+//						DoQuery.doQuery4(conn, a);
+//					} catch (IOException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//				}
+//			};
+//		}
+		atdb.addEntity(100);
+		atdb.addRelationship(200);
 		System.out.println("Finish generating data");
 	}
 

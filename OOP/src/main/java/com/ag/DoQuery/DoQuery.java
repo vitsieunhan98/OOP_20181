@@ -34,7 +34,7 @@ public class DoQuery {
 				+ "?s ?p ?o ."
 				+ "?s rdf:type oop:Person ."
 				+ "?o oop:label \"Food and Agriculture Organization\" ."
-				+ "FILTER(regex(str(?p), \"manage\", \"i\")"
+				+ "FILTER(regex(str(?p), \"manage\", \"i\"))"
 				+ "}";
 		
 		countTime(conn, q, 2, title);
