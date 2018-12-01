@@ -31,7 +31,7 @@ public class ConnectDB {
 	protected IRI LOCATION;
 	protected IRI ORGANIZATION;
 	protected IRI RELATIONSHIP;
-	protected IRI WHEN;
+	protected IRI NAME;
 	
 	public ConnectDB() {
 		super();
@@ -62,6 +62,7 @@ public class ConnectDB {
 		POSITION = f.createIRI(NAMESPACE, "position");
 		HEADQUARTER = f.createIRI(NAMESPACE, "headquarter");
 		TIME = f.createIRI(NAMESPACE, "time");
+		NAME = f.createIRI(NAMESPACE, "name");
 		
 		ENTITY = f.createIRI(NAMESPACE, "Entity");
 		PERSON = f.createIRI(NAMESPACE, "Person");
@@ -70,7 +71,7 @@ public class ConnectDB {
 		LOCATION = f.createIRI(NAMESPACE, "Location");
 		ORGANIZATION = f.createIRI(NAMESPACE, "Organization");
 		RELATIONSHIP = f.createIRI(NAMESPACE, "Relationship");
-		WHEN = f.createIRI(NAMESPACE, "When");
+		
 	}
 
 	public IRI getLABEL() {
@@ -129,8 +130,8 @@ public class ConnectDB {
 		return ENTITY;
 	}
 
-	public IRI getWHEN() {
-		return WHEN;
+	public IRI getNAME() {
+		return NAME;
 	}
 	
 }

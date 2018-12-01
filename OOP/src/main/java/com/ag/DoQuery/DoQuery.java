@@ -31,10 +31,11 @@ public class DoQuery {
 		//(Ai điều hành tổ chức ... )
 		String q = "select ?s"
 				+ "where {"
-				+ "?s ?p ?o ."
+				+ "?s ?rel ?o ."
 				+ "?s rdf:type oop:Person ."
 				+ "?o oop:label \"Food and Agriculture Organization\" ."
-				+ "FILTER(regex(str(?p), \"manage\", \"i\"))"
+				+ "?rel oop:name ?name ."
+				+ "FILTER(regex(str(?name), \"manage\", \"i\"))"
 				+ "}";
 		
 		countTime(conn, q, 2, title);
@@ -74,11 +75,12 @@ public class DoQuery {
 		//Lấy nhãn của thực thể loại Country có quan hệ hold với thực thể có nhãn Space Trip (Nước nào tổ chức Space Trip)
 		String q = "select ?label"
 				+ "where {"
-				+ "?s ?p ?o. "
+				+ "?s ?rel ?o. "
 				+ "?o rdf:type oop:Country ."
 				+ "?o oop:label ?label ."
 				+ "?s oop:label \"Space Trip\" ."
-				+ "FILTER(regex(str(?p), \"hold\", \"i\")) ."
+				+ "?rel oop:name ?name ."
+				+ "FILTER(regex(str(?name), \"hold\", \"i\")) ."
 				+ "}";
 		
 		countTime(conn, q, 6, title);
@@ -89,12 +91,13 @@ public class DoQuery {
 		//Lấy Country mà Renae Ratledge làm Dentists sống
 		String q = "select ?label"
 				+ "where {"
-				+ "?s ?p ?o ."
+				+ "?s ?rel ?o ."
 				+ "?o rdf:type oop:Country ."
 				+ "?s oop:label \"Renae Ratledge\" ."
 				+ "?s oop:position \"Dentists\""
 				+ "?o oop:label ?label ."
-				+ "FILTER(regex(str(?p), \"have\", \"i\"))"
+				+ "?rel oop:name ?name"
+				+ "FILTER(regex(str(?name), \"have\", \"i\"))"
 				+ "}";
 		
 		countTime(conn, q, 7, title);
@@ -127,11 +130,12 @@ public class DoQuery {
 		//Lấy nhãn thực thể Country có World Trade Organization (WTO)
 		String q = "select ?label"
 				+ "where {"
-				+ "?s ?p ?o ."
+				+ "?s ?rel ?o ."
+				+ "?rel oop:name ?name ."
 				+ "?s rdf:type oop:Country ."
 				+ "?s oop:label ?label ."
 				+ "?o oop:label \"World Trade Organization (WTO)\" ."
-				+ "FILTER(regex(str(?p), \"have\", \"i\"))"
+				+ "FILTER(regex(str(?name), \"have\", \"i\"))"
 				+ "}";
 		
 		countTime(conn, q, 10, title);
@@ -141,11 +145,12 @@ public class DoQuery {
 		//Lấy nhãn của các thực thể loại Event được tổ chức ở South Park Church
 		String q = "select ?label"
 				+ "where {"
-				+ "?s ?p ?o ."
+				+ "?s ?rel ?o ."
+				+ "?rel oop:name ?name"
 				+ "?s oop:label ?label ."
 				+ "?s rdf:type oop:Event ."
 				+ "?o oop:label \"South Park Church\" ."
-				+ "FILTER(regex(str(?p), \"hold in\", \"i\"))"
+				+ "FILTER(regex(str(?name), \"hold in\", \"i\"))"
 				+ "}";
 		
 		countTime(conn, q, 11, title);
@@ -155,14 +160,14 @@ public class DoQuery {
 		//Lấy nhãn của Country mà person có nhãn Genaro Kopacz visit vào năm 2000 
 		String q = "select ?label"
 				+ "where {"
-				+ "?s ?p ?o ."
+				+ "?s ?rel ?o ."
 				+ "?o oop:label ?label ."
 				+ "?o rdf:type oop:Country ."
 				+ "?s rdf:type oop:Person ."
 				+ "?s oop:label \"Genaro Kopacz\" ."
-				+ "?s ?o ?time ."
-				+ "FILTER(regex(str(?time), \"2000\", \"i\"))"
-				+ "FILTER(regex(str(?p), \"visit\", \"i\"))"
+				+ "?rel oop:name ?name ."
+				+ "?rel oop:time ?time ."
+				+ "FILTER(regex(str(?time), \"2000\") || regex(str(?name), \"visit\", \"i\"))"
 				+ "}";
 		
 		countTime(conn, q, 12, title);

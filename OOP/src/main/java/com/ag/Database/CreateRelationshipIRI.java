@@ -26,13 +26,18 @@ public class CreateRelationshipIRI extends ConnectDB {
 		ValueFactory f = myRepo.getValueFactory();
 		RepositoryConnection conn = myRepo.getConnection();
 		
-		IRI relationship = f.createIRI(RELATIONSHIP.toString(), rel.getName());
+		IRI relationship = f.createIRI(RELATIONSHIP.toString(), rel.getId());
 		
+		Literal name = f.createLiteral(rel.getName());
 		Literal time = f.createLiteral(rel.getTime());
+		Literal link = f.createLiteral(rel.getSource().getLink());
+		Literal time_extracted = f.createLiteral(rel.getSource().getTime_extracted());
 		
 		conn.add(et1, relationship, et2);
-		conn.add(relationship, WHEN, time);
-		conn.add(et1, et2, time);
+		conn.add(relationship, NAME, name);
+		conn.add(relationship, TIME, time);
+		conn.add(relationship, LINK, link);
+		conn.add(relationship, TIME_EXTRACTED, time_extracted);
 	}
 	
 }

@@ -32,7 +32,7 @@ public class GenRelationship implements IGenerate<Relationship>{
 		if(!et1.getClass().getSimpleName().equals(et2.getClass().getSimpleName())) {
 			list_name = new ArrayList<String>(new ReadFile().readFile("data/relationship/" + et1.getClass().getSimpleName().toLowerCase() + et2.getClass().getSimpleName().toLowerCase() + ".txt"));
 			
-			return new Relationship(getRandomName(), et1, et2, new Relationship().getRandomTime(), new Entity().getRandomSource());
+			return new Relationship(new Relationship().getRandomId(), getRandomName(), et1, et2, new Relationship().getRandomTime(), new Entity().getRandomSource());
 		}
 		else
 			return generate();
