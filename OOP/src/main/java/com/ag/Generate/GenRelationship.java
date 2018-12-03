@@ -10,14 +10,12 @@ import com.ag.Entity.*;
 import com.ag.HandleFile.ReadFile;
 
 public class GenRelationship implements IGenerate<Relationship>{
-
-	private List<String> list_name;
 	
 	public GenRelationship() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getRandomName() {
+	public String getRandomName(List<String> list_name) {
 		Random rd = new Random();
 		int index = rd.nextInt(list_name.size());
 		return list_name.get(index);
@@ -26,16 +24,11 @@ public class GenRelationship implements IGenerate<Relationship>{
 	@Override
 	public Relationship generate() throws IOException {
 		// TODO Auto-generated method stub
-		
 		Entity et1 = new GenEntity().generate();
 		Entity et2 = new GenEntity().generate();
-		if(!et1.getClass().getSimpleName().equals(et2.getClass().getSimpleName())) {
-			list_name = new ArrayList<String>(new ReadFile().readFile("data/relationship/" + et1.getClass().getSimpleName().toLowerCase() + et2.getClass().getSimpleName().toLowerCase() + ".txt"));
+		List<String> list_name = new ArrayList<String>(new ReadFile().readFile("data/relationship/" + et1.getClass().getSimpleName().toLowerCase() + et2.getClass().getSimpleName().toLowerCase() + ".txt"));
 			
-			return new Relationship(new Relationship().getRandomId(), getRandomName(), et1, et2, new Relationship().getRandomTime(), new Entity().getRandomSource());
-		}
-		else
-			return generate();
+		return new Relationship(new Relationship().getRandomId(), getRandomName(list_name), et1, et2, new Relationship().getRandomTime(), new Entity().getRandomSource());
 	}
 
 }

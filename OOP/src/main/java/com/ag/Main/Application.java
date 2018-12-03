@@ -2,6 +2,9 @@ package com.ag.Main;
 
 import java.io.IOException;
 
+import org.eclipse.rdf4j.query.QueryLanguage;
+import org.eclipse.rdf4j.query.TupleQuery;
+
 import com.ag.Database.*;
 import com.ag.DoQuery.DoQuery;
 import com.franz.agraph.repository.AGRepositoryConnection;
@@ -14,8 +17,8 @@ public class Application {
 		ConnectDB cdb = new ConnectDB();
 		AGRepositoryConnection conn = cdb.connectDB().getConnection();
 		
-		int[] nentity = {100, 5000, 60000, 700000};
-		int[] nrel = {200, 7000, 80000, 1500000};
+		int[] nentity = {100, 5000, 60000, 400000};
+		int[] nrel = {200, 7000, 80000, 500000};
 		
 		System.out.println("Start generating data");
 		
@@ -23,52 +26,23 @@ public class Application {
 //			atdb.addEntity(nentity[i]);
 //			atdb.addRelationship(nrel[i]);
 //			
-//			String a = Integer.toString(i);
+//			DoQuery.doQuery(conn, Integer.toString(i));
 //			
-//			Thread t1 = new Thread(a) {
-//				public void run() {
-//					try {
-//						DoQuery.doQuery1(conn, a);
-//					} catch (IOException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//				}
-//			};
-//			Thread t2 = new Thread(a) {
-//				public void run() {
-//					try {
-//						DoQuery.doQuery2(conn, a);
-//					} catch (IOException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//				}
-//			};
-//			Thread t3 = new Thread(a) {
-//				public void run() {
-//					try {
-//						DoQuery.doQuery3(conn, a);
-//					} catch (IOException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//				}
-//			};
-//			
-//			Thread t4 = new Thread(a) {
-//				public void run() {
-//					try {
-//						DoQuery.doQuery4(conn, a);
-//					} catch (IOException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//				}
-//			};
 //		}
-		atdb.addEntity(100);
-		atdb.addRelationship(200);
+//		atdb.addEntity(100);
+//		atdb.addRelationship(200);
+		
+		String q1 = "select ?description"
+				+ "where {"
+				+ "?s oop:description ?description ."
+				+ "?s oop:label \"Jann Jacko\" ."
+				+ "}";
+		
+		long begin = System.nanoTime();
+		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, q1);
+		long delta = (System.nanoTime() - begin);
+		System.out.println(Long.toString(delta/1000000));
+		
 		System.out.println("Finish generating data");
 	}
 
