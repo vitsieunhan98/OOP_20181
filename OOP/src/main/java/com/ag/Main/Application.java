@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.eclipse.rdf4j.query.QueryLanguage;
 import org.eclipse.rdf4j.query.TupleQuery;
+import org.eclipse.rdf4j.query.TupleQueryResult;
 
 import com.ag.Database.*;
 import com.ag.DoQuery.DoQuery;
@@ -40,6 +41,7 @@ public class Application {
 		
 		long begin = System.nanoTime();
 		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, q1);
+		TupleQueryResult rs = tupleQuery.evaluate();
 		long delta = (System.nanoTime() - begin);
 		System.out.println(Long.toString(delta/1000000));
 		
