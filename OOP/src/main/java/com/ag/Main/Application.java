@@ -23,27 +23,13 @@ public class Application {
 		
 		System.out.println("Start generating data");
 		
-//		for (int i = 0; i < nentity.length; i++) {
-//			atdb.addEntity(nentity[i]);
-//			atdb.addRelationship(nrel[i]);
-//			
-//			DoQuery.doQuery(conn, Integer.toString(i));
-//			
-//		}
-//		atdb.addEntity(100);
-//		atdb.addRelationship(200);
-		
-		String q1 = "select ?description"
-				+ "where {"
-				+ "?s oop:description ?description ."
-				+ "?s oop:label \"Jann Jacko\" ."
-				+ "}";
-		
-		long begin = System.nanoTime();
-		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, q1);
-		TupleQueryResult rs = tupleQuery.evaluate();
-		long delta = (System.nanoTime() - begin);
-		System.out.println(Long.toString(delta/1000000));
+		for (int i = 0; i < nentity.length; i++) {
+			atdb.addEntity(nentity[i]);
+			atdb.addRelationship(nrel[i]);
+			
+			DoQuery.doQuery(conn, i);
+			
+		}
 		
 		System.out.println("Finish generating data");
 	}

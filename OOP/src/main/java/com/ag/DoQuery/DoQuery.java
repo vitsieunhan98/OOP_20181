@@ -206,7 +206,7 @@ public class DoQuery {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void doQuery(AGRepositoryConnection conn, String title) throws IOException {
+	public static void doQuery(AGRepositoryConnection conn, int title) throws IOException {
 		Thread[] thread = new Thread[20];
 		for(int i=0; i<20; i++) {
 			String a = Integer.toString(i);
@@ -228,12 +228,19 @@ public class DoQuery {
 		}
 	}
 	
-	public static void countTime(AGRepositoryConnection conn ,String query, int id, String title) throws IOException {
+	public static void countTime(AGRepositoryConnection conn ,String query, int id, int title) throws IOException {
 		long begin = System.nanoTime();
 		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
 		long delta = (System.nanoTime() - begin);
-		new WriteFile().writeFile("result/q" + Integer.toString(id) + "-" + title + ".txt", Long.toString(delta/1000000));
+		new WriteFile().writeFile("result/q" + Integer.toString(id) + "-" + Integer.toString(title) + ".txt", Long.toString(delta/1000000));
 	}
 	
+	public static void countTime1(AGRepositoryConnection conn ,String query, int id, int title) throws IOException {
+		long begin = System.nanoTime();
+		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
+		TupleQueryResult result = tupleQuery.evaluate();
+		long delta = (System.nanoTime() - begin);
+		new WriteFile().writeFile("result1/q" + Integer.toString(id) + "-" + Integer.toString(title) + ".txt", Long.toString(delta/1000000));
+	}
 	
 }
