@@ -81,7 +81,7 @@
 											"top": 166,
 											"width": 59.99169921875,
 											"height": 13,
-											"text": "Entity"
+											"text": "entity"
 										},
 										{
 											"_type": "LabelView",
@@ -183,7 +183,7 @@
 											"top": 158,
 											"width": 59.99169921875,
 											"height": 13,
-											"text": "Generate"
+											"text": "generate"
 										},
 										{
 											"_type": "LabelView",
@@ -285,7 +285,7 @@
 											"top": 270,
 											"width": 59.99169921875,
 											"height": 13,
-											"text": "Main"
+											"text": "app"
 										},
 										{
 											"_type": "LabelView",
@@ -386,7 +386,7 @@
 											"top": 158,
 											"width": 59.99169921875,
 											"height": 13,
-											"text": "Database"
+											"text": "database"
 										},
 										{
 											"_type": "LabelView",
@@ -486,7 +486,7 @@
 											"top": 294,
 											"width": 59.99169921875,
 											"height": 13,
-											"text": "DoQuery"
+											"text": "doquery"
 										},
 										{
 											"_type": "LabelView",
@@ -682,7 +682,7 @@
 											"top": 286,
 											"width": 65.736328125,
 											"height": 13,
-											"text": "HandleFile"
+											"text": "handlefile"
 										},
 										{
 											"_type": "LabelView",
@@ -1313,7 +1313,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFnbSemOOqo9e4="
 					},
-					"name": "Entity",
+					"name": "entity",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -1336,7 +1336,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFnbSemOOqo9e4="
 					},
-					"name": "Generate",
+					"name": "generate",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -1359,7 +1359,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFnbSemOOqo9e4="
 					},
-					"name": "Main"
+					"name": "app"
 				},
 				{
 					"_type": "UMLPackage",
@@ -1367,7 +1367,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFnbSemOOqo9e4="
 					},
-					"name": "Database",
+					"name": "database",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -1390,7 +1390,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFnbSemOOqo9e4="
 					},
-					"name": "DoQuery",
+					"name": "doquery",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -1413,7 +1413,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFnbSemOOqo9e4="
 					},
-					"name": "HandleFile",
+					"name": "handlefile",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",

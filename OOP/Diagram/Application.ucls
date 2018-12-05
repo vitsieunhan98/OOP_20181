@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.ag.Main.Application" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Main/Application.java" binary="false" corner="BOTTOM_RIGHT">    
+<class-diagram version="1.2.2" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.ag.app.Application" project="OOP" 
+    file="/OOP/src/main/java/com/ag/app/Application.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="106" width="130" x="856" y="188"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.ag.DoQuery.DoQuery" project="OOP" 
-    file="/OOP/src/main/java/com/ag/DoQuery/DoQuery.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="com.ag.doquery.DoQuery" project="OOP" 
+    file="/OOP/src/main/java/com/ag/doquery/DoQuery.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="428" y="304"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="com.ag.HandleFile.WriteFile" project="OOP" 
-    file="/OOP/src/main/java/com/ag/HandleFile/WriteFile.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="com.ag.handlefile.WriteFile" project="OOP" 
+    file="/OOP/src/main/java/com/ag/handlefile/WriteFile.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1079" y="494"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -29,12 +29,12 @@
     </display>  
   </class>  
   <dependency id="4">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="5">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="5">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
   </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.2" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.ag.Database.AddToDB" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/AddToDB.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="com.ag.database.AddToDB" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/AddToDB.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="199" y="82"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.ag.Database.ConnectDB" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/ConnectDB.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="com.ag.database.ConnectDB" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/ConnectDB.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="793" width="183" x="522" y="106"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="com.ag.Database.CreateCountryIRI" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/CreateCountryIRI.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="com.ag.database.CreateCountryIRI" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/CreateCountryIRI.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1145" y="497"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="com.ag.Database.CreateEntityIRI" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/CreateEntityIRI.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="com.ag.database.CreateEntityIRI" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/CreateEntityIRI.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="405" y="51"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="com.ag.Database.CreateEventIRI" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/CreateEventIRI.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="com.ag.database.CreateEventIRI" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/CreateEventIRI.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="117" y="266"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.ag.Database.CreateLocationIRI" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/CreateLocationIRI.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="com.ag.database.CreateLocationIRI" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/CreateLocationIRI.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="106" width="153" x="1194" y="253"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,8 +55,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.ag.Database.CreateOrganizationIRI" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/CreateOrganizationIRI.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="com.ag.database.CreateOrganizationIRI" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/CreateOrganizationIRI.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1198" y="171"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -64,8 +64,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="com.ag.Database.CreatePersonIRI" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/CreatePersonIRI.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="8" language="java" name="com.ag.database.CreatePersonIRI" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/CreatePersonIRI.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="987" y="48"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -73,8 +73,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="com.ag.Database.CreateRelationshipIRI" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/CreateRelationshipIRI.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="9" language="java" name="com.ag.database.CreateRelationshipIRI" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/CreateRelationshipIRI.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="231" y="465"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -82,8 +82,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="10" language="java" name="com.ag.Database.ICreateIRI" project="OOP" 
-    file="/OOP/src/main/java/com/ag/Database/ICreateIRI.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="10" language="java" name="com.ag.database.ICreateIRI" project="OOP" 
+    file="/OOP/src/main/java/com/ag/database/ICreateIRI.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="635" y="36"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -91,66 +91,66 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <realization id="11">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="10"/>  
-  </realization>  
-  <generalization id="12">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="13">    
+  <generalization id="11">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
-  <realization id="14">    
+  <realization id="12">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="10"/>  
   </realization>  
-  <dependency id="15">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <generalization id="16">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <realization id="17">    
+  <realization id="13">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="10"/>  
   </realization>  
-  <realization id="18">    
+  <dependency id="14">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <realization id="15">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <realization id="16">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="10"/>  
   </realization>  
+  <realization id="17">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <dependency id="18">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
   <generalization id="19">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
   <generalization id="20">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="21">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <generalization id="22">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
-  <generalization id="21">    
+  <generalization id="23">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="25">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
-  <dependency id="22">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <realization id="23">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="10"/>  
-  </realization>  
-  <generalization id="24">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <realization id="25">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="10"/>  
-  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
