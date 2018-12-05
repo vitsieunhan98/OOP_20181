@@ -2,6 +2,8 @@ package com.ag.DoQuery;
 
 import java.io.IOException;
 
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.QueryLanguage;
 import org.eclipse.rdf4j.query.TupleQuery;
 import org.eclipse.rdf4j.query.TupleQueryResult;
@@ -213,6 +215,10 @@ public class DoQuery {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public static String[] getQuery() {
+		return query;
+	}
 
 	public static void doQuery(AGRepositoryConnection conn, int title) throws IOException {
 		Thread[] thread = new Thread[20];
@@ -246,4 +252,18 @@ public class DoQuery {
 		new WriteFile().writeFile("result/q" + Integer.toString(id) + "-" + Integer.toString(title) + ".txt", Long.toString(delta/1000000));
 	}
 	
+	public static void displayResult(AGRepositoryConnection conn ,String query, String title) {
+		System.out.println("\nKết quả truy vấn \n");
+		
+		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
+		TupleQueryResult result = tupleQuery.evaluate();
+		
+		while (result.hasNext()) {
+            BindingSet bindingSet = result.next();
+            Value rs = bindingSet.getValue(title);
+            System.out.println(rs.stringValue());
+        }
+		
+        result.close();
+	}
 }
