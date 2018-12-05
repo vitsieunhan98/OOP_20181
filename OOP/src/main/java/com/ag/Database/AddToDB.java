@@ -22,7 +22,7 @@ public class AddToDB {
 	
 	public void addEntity(int numberOfEntity) throws IOException {
 		if(numberOfEntity > nEntity) {
-			for(int i=0; i<numberOfEntity; i++) {
+			for(int i=0; i<numberOfEntity - nEntity; i++) {
 				Entity et = new GenEntity().generate();
 				list_entity.add(new CreateEntityIRI().createIRI(et));
 			}
@@ -32,7 +32,7 @@ public class AddToDB {
 	
 	public void addRelationship(int numberOfRelationship) throws IOException {
 		if(numberOfRelationship > nRel) {
-			for(int i=0; i<numberOfRelationship; i++) {
+			for(int i=0; i<numberOfRelationship - nRel; i++) {
 				IRI et1 = list_entity.get((int) (Math.random() * list_entity.size() + 0));
 				IRI et2 = list_entity.get((int) (Math.random() * list_entity.size() + 0));
 				Relationship rel = new GenRelationship().generate();
