@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.ValueFactory;
 
 import com.ag.entity.*;
 import com.ag.generate.*;
@@ -13,8 +12,6 @@ import com.franz.agraph.repository.AGRepository;
 public class AddToDB extends ConnectDB {
 
 	private List<Entity> listEntity;
-	AGRepository myRepo = connectDB();
-	ValueFactory f = myRepo.getValueFactory();
 	
 	public AddToDB() {
 		// TODO Auto-generated constructor stub
