@@ -13,18 +13,21 @@ public class AddToDB {
 	private static int nEntity = 0;
 	private static int nRel = 0;
 	
-	private List<IRI> list_entity;
+	private List<IRI> listIRIEntity;
+	private List<Entity> listEntity;
 	
 	public AddToDB() {
 		// TODO Auto-generated constructor stub
-		list_entity = new ArrayList<>();
+		listIRIEntity = new ArrayList<>();
+		listEntity = new ArrayList<>();
 	}
 	
 	public void addEntity(int numberOfEntity) throws IOException {
 		if(numberOfEntity > nEntity) {
 			for(int i=0; i<numberOfEntity - nEntity; i++) {
 				Entity et = new GenEntity().generate();
-				list_entity.add(new CreateEntityIRI().createIRI(et));
+				listEntity.add(et);
+				listIRIEntity.add(new CreateEntityIRI().createIRI(et));
 			}
 		}
 		nEntity = numberOfEntity;
@@ -33,9 +36,12 @@ public class AddToDB {
 	public void addRelationship(int numberOfRelationship) throws IOException {
 		if(numberOfRelationship > nRel) {
 			for(int i=0; i<numberOfRelationship - nRel; i++) {
-				IRI et1 = list_entity.get((int) (Math.random() * list_entity.size() + 0));
-				IRI et2 = list_entity.get((int) (Math.random() * list_entity.size() + 0));
-				Relationship rel = new GenRelationship().generate();
+				int index = (int) (Math.random() * listIRIEntity.size() + 0);
+				IRI et1 = listIRIEntity.get(index);
+				IRI et2 = listIRIEntity.get(index);
+				Entity ent1 = listEntity.get(index);
+				Entity ent2 = listEntity.get(index);
+				Relationship rel = new GenRelationship().generate(ent1, ent2);
 				
 				new CreateRelationshipIRI().createRelationshipIRI(et1, rel, et2);
 			}

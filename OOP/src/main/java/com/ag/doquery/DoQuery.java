@@ -16,8 +16,9 @@ public class DoQuery {
 	private static String q1 = "select ?description "
 			+ "where { "
 			+ "?s oop:description ?description . "
-			+ "?s oop:label \"Jann Jacko\" . "
+			+ "?s oop:label ?name . "
 			+ "?s rdf:type oop:Person . "
+			+ "FILTER(regex(str(?name), \"Cherryl Confer\", \"i\"))"
 			+ " }";
 	
 	private static String q2 = "select ?label "
