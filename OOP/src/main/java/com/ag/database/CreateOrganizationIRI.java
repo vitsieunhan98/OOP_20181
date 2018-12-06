@@ -18,8 +18,6 @@ public class CreateOrganizationIRI extends ConnectDB implements ICreateIRI<Organ
 	@Override
 	public IRI createIRI(Organization et) {
 		// TODO Auto-generated method stub
-		AGRepository myRepo = connectDB();
-		ValueFactory f = myRepo.getValueFactory();
 		
 		IRI organization = f.createIRI(ENTITY.toString(), et.getId());
 		
@@ -29,7 +27,6 @@ public class CreateOrganizationIRI extends ConnectDB implements ICreateIRI<Organ
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
 		Literal headquarter = f.createLiteral(et.getHeadquarter());
 		
-		AGRepositoryConnection conn = myRepo.getConnection();
 		
 		conn.add(organization, RDF.TYPE, ORGANIZATION);
 		conn.add(organization, LABEL, label);

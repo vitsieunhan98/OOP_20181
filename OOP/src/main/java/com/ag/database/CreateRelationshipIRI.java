@@ -20,10 +20,6 @@ public class CreateRelationshipIRI extends ConnectDB {
 
 	public void createRelationshipIRI(IRI et1, Relationship rel, IRI et2) {
 		// TODO Auto-generated method stub
-		AGRepository myRepo = connectDB();
-		ValueFactory f = myRepo.getValueFactory();
-		RepositoryConnection conn = myRepo.getConnection();
-		
 		IRI relationship = f.createIRI(RELATIONSHIP.toString(), rel.getId());
 		
 		Literal name = f.createLiteral(rel.getName());

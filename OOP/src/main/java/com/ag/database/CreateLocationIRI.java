@@ -18,8 +18,6 @@ public class CreateLocationIRI extends ConnectDB implements ICreateIRI<Location>
 	@Override
 	public IRI createIRI(Location et) {
 		// TODO Auto-generated method stub
-		AGRepository myRepo = connectDB();
-		ValueFactory f = myRepo.getValueFactory();
 		
 		IRI location = f.createIRI(ENTITY.toString(), et.getId());
 		
@@ -28,7 +26,6 @@ public class CreateLocationIRI extends ConnectDB implements ICreateIRI<Location>
 		Literal link = f.createLiteral(et.getSource().getLink());
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
 		
-		AGRepositoryConnection conn = myRepo.getConnection();
 		
 		conn.add(location, RDF.TYPE, LOCATION);
 		conn.add(location, LABEL, label);

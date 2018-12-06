@@ -19,8 +19,6 @@ public class CreatePersonIRI extends ConnectDB implements ICreateIRI<Person>{
 	@Override
 	public IRI createIRI(Person et) {
 		// TODO Auto-generated method stub
-		AGRepository myRepo = connectDB();
-		ValueFactory f = myRepo.getValueFactory();
 		
 		IRI person = f.createIRI(ENTITY.toString(), et.getId());
 		
@@ -29,8 +27,6 @@ public class CreatePersonIRI extends ConnectDB implements ICreateIRI<Person>{
 		Literal link = f.createLiteral(et.getSource().getLink());
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
 		Literal position = f.createLiteral(et.getPostion());
-		
-		AGRepositoryConnection conn = myRepo.getConnection();
 		
 		conn.add(person, RDF.TYPE, PERSON);
 		conn.add(person, LABEL, label);

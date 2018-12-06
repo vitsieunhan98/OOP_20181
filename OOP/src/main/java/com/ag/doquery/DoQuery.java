@@ -253,18 +253,18 @@ public class DoQuery {
 		new WriteFile().writeFile("result/q" + Integer.toString(id) + "-" + Integer.toString(title) + ".txt", Long.toString(delta/1000000));
 	}
 	
-	public static void displayResult(AGRepositoryConnection conn ,String query, String title) {
-		System.out.println("\nKết quả truy vấn \n");
-		
-		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
-		TupleQueryResult result = tupleQuery.evaluate();
-		
-		while (result.hasNext()) {
-            BindingSet bindingSet = result.next();
-            Value rs = bindingSet.getValue(title);
-            System.out.println(rs.stringValue());
-        }
-		
-        result.close();
-	}
+//	public static void displayResult(AGRepositoryConnection conn ,String query, String title) {
+//		System.out.println("\nKết quả truy vấn \n");
+//		
+//		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
+//		TupleQueryResult result = tupleQuery.evaluate();
+//		
+//		while (result.hasNext()) {
+//            BindingSet bindingSet = result.next();
+//            Value rs = bindingSet.getValue(title);
+//            System.out.println(rs.stringValue());
+//        }
+//		
+//        result.close();
+//	}
 }

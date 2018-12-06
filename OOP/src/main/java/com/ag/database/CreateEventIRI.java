@@ -18,8 +18,6 @@ public class CreateEventIRI extends ConnectDB implements ICreateIRI<Event>{
 	@Override
 	public IRI createIRI(Event et) {
 		// TODO Auto-generated method stub
-		AGRepository myRepo = connectDB();
-		ValueFactory f = myRepo.getValueFactory();
 		
 		IRI event = f.createIRI(ENTITY.toString(), et.getId());
 		
@@ -27,8 +25,6 @@ public class CreateEventIRI extends ConnectDB implements ICreateIRI<Event>{
 		Literal description = f.createLiteral(et.getDescription());
 		Literal link = f.createLiteral(et.getSource().getLink());
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
-		
-		AGRepositoryConnection conn = myRepo.getConnection();
 		
 		conn.add(event, RDF.TYPE, EVENT);
 		conn.add(event, LABEL, label);

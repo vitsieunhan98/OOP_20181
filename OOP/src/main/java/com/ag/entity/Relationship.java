@@ -69,7 +69,6 @@ public class Relationship {
 	}
 	
 	public Relationship() throws IOException {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 

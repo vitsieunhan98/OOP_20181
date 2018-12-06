@@ -5,6 +5,7 @@ import org.eclipse.rdf4j.model.ValueFactory;
 
 import com.franz.agraph.repository.AGCatalog;
 import com.franz.agraph.repository.AGRepository;
+import com.franz.agraph.repository.AGRepositoryConnection;
 import com.franz.agraph.repository.AGServer;
 
 public class ConnectDB {
@@ -13,7 +14,6 @@ public class ConnectDB {
 	private static final String REPOSITORY_ID = "oop";
 	private static final String USERNAME = "test";
 	private static final String PASSWORD = "xyzzy";
-	
 	private static final String NAMESPACE = "http://example.org/ag#";
 	
 	protected IRI LABEL;
@@ -33,6 +33,10 @@ public class ConnectDB {
 	protected IRI RELATIONSHIP;
 	protected IRI NAME;
 	
+	AGRepository myRepo = connectDB();
+	ValueFactory f = myRepo.getValueFactory();
+	AGRepositoryConnection conn = myRepo.getConnection();
+	
 	public ConnectDB() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -48,8 +52,6 @@ public class ConnectDB {
 	}
 	
 	public void setNamespace() {
-		AGRepository myRepo = connectDB();
-		ValueFactory f = myRepo.getValueFactory();
 		
 		LABEL = f.createIRI(NAMESPACE, "label");
 		DESCRIPTION = f.createIRI(NAMESPACE, "description");
