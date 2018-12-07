@@ -20,7 +20,7 @@ public class CreatePersonIRI extends ConnectDB implements ICreateIRI<Person>{
 	public IRI createIRI(Person et) {
 		// TODO Auto-generated method stub
 		
-		IRI person = f.createIRI(ENTITY.toString(), et.getId());
+		IRI person = f.createIRI(PERSON.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());

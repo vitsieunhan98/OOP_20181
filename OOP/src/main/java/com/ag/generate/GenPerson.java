@@ -12,8 +12,8 @@ public class GenPerson implements IGenerate<Person>{
 
 	@Override
 	public Person generate() throws IOException {
-		// TODO Auto-generated method stub
-		return new Person(new Entity().getRandomId(), new Entity().getRandomDescription(0), new Entity().getRandomSource(), new Person().getRandomPosition(), new Person().getRandomLabel());
+		Person et = new Person();
+		return new Person(et.getRandomId(), et.getRandomDescription(0), et.getRandomSource(), et.getRandomPosition(), et.getRandomLabel());
 	}
 	
 }

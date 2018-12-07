@@ -12,6 +12,7 @@ public class GenCountry implements IGenerate<Country>{
 	
 	@Override
 	public Country generate() throws IOException {
-		return new Country(new Entity().getRandomId(), new Entity().getRandomDescription(4), new Entity().getRandomSource(), new Country().getRandomLabel());
+		Country et = new Country();
+		return new Country(et.getRandomId(), et.getRandomDescription(4), et.getRandomSource(), et.getRandomLabel());
 	}
 }

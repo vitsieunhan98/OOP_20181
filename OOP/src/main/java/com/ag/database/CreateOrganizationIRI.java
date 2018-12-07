@@ -19,14 +19,13 @@ public class CreateOrganizationIRI extends ConnectDB implements ICreateIRI<Organ
 	public IRI createIRI(Organization et) {
 		// TODO Auto-generated method stub
 		
-		IRI organization = f.createIRI(ENTITY.toString(), et.getId());
+		IRI organization = f.createIRI(ORGANIZATION.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());
 		Literal link = f.createLiteral(et.getSource().getLink());
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
 		Literal headquarter = f.createLiteral(et.getHeadquarter());
-		
 		
 		conn.add(organization, RDF.TYPE, ORGANIZATION);
 		conn.add(organization, LABEL, label);

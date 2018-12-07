@@ -18,7 +18,7 @@ public class CreateCountryIRI extends ConnectDB implements ICreateIRI<Country>{
 	@Override
 	public IRI createIRI(Country et) {
 		// TODO Auto-generated method stub
-		IRI country = f.createIRI(ENTITY.toString(), et.getId());
+		IRI country = f.createIRI(COUNTRY.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());

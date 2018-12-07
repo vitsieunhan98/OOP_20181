@@ -12,6 +12,7 @@ public class GenOrganization implements IGenerate<Organization>{
 
 	@Override
 	public Organization generate() throws IOException {
-		return new Organization(new Entity().getRandomId(), new Entity().getRandomDescription(1), new Entity().getRandomSource(), new Organization().getRandomHeadquarter(), new Organization().getRandomLabel());
+		Organization et = new Organization();
+		return new Organization(et.getRandomId(), et.getRandomDescription(1), et.getRandomSource(), et.getRandomHeadquarter(), et.getRandomLabel());
 	}
 }

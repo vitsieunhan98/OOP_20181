@@ -19,13 +19,12 @@ public class CreateLocationIRI extends ConnectDB implements ICreateIRI<Location>
 	public IRI createIRI(Location et) {
 		// TODO Auto-generated method stub
 		
-		IRI location = f.createIRI(ENTITY.toString(), et.getId());
+		IRI location = f.createIRI(LOCATION.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());
 		Literal link = f.createLiteral(et.getSource().getLink());
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
-		
 		
 		conn.add(location, RDF.TYPE, LOCATION);
 		conn.add(location, LABEL, label);

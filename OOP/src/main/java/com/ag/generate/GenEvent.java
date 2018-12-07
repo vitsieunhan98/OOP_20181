@@ -12,7 +12,8 @@ public class GenEvent implements IGenerate<Event>{
 
 	@Override
 	public Event generate() throws IOException {
-		return new Event(new Entity().getRandomId(), new Entity().getRandomDescription(3), new Entity().getRandomSource(), new Event().getRandomLabel());
+		Event et = new Event();
+		return new Event(et.getRandomId(), et.getRandomDescription(3), et.getRandomSource(), et.getRandomLabel());
 	}
 	
 }

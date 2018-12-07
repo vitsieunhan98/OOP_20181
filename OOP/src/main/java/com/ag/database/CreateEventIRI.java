@@ -19,7 +19,7 @@ public class CreateEventIRI extends ConnectDB implements ICreateIRI<Event>{
 	public IRI createIRI(Event et) {
 		// TODO Auto-generated method stub
 		
-		IRI event = f.createIRI(ENTITY.toString(), et.getId());
+		IRI event = f.createIRI(EVENT.toString(), et.getId());
 		
 		Literal label = f.createLiteral(et.getLabel());
 		Literal description = f.createLiteral(et.getDescription());

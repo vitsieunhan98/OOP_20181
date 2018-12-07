@@ -11,28 +11,31 @@ import com.franz.agraph.repository.AGRepository;
 
 public class AddToDB extends ConnectDB {
 
-	private List<Entity> listEntity;
+	private List<IRI> listIRIEntity;
 	
 	public AddToDB() {
 		// TODO Auto-generated constructor stub
-		listEntity = new ArrayList<>();
+		listIRIEntity = new ArrayList<>();
 	}
 	
 	public void addEntity(int numberOfEntity) throws IOException {
+		GenEntity genEn = new GenEntity();
+		CreateEntityIRI crEnIRI = new CreateEntityIRI();
 		for(int i=0; i<numberOfEntity; i++) {
-			Entity et = new GenEntity().generate();
-			listEntity.add(et);
-			new CreateEntityIRI().createIRI(et);
+			Entity et = genEn.generate();
+			listIRIEntity.add(crEnIRI.createIRI(et));
 		}
 	}
 	
 	public void addRelationship(int numberOfRelationship) throws IOException {
+		GenRelationship genRel = new GenRelationship();
 		for(int i=0; i<numberOfRelationship; i++) {
-			Entity ent1 = listEntity.get((int) (Math.random() * listEntity.size() + 0));
-			Entity ent2 = listEntity.get((int) (Math.random() * listEntity.size() + 0));
-			Relationship rel = new GenRelationship().generate(ent1, ent2);
+			IRI ent1 = listIRIEntity.get((int) (Math.random() * listIRIEntity.size() + 0));
+			IRI ent2 = listIRIEntity.get((int) (Math.random() * listIRIEntity.size() + 0));
 			
-			new CreateRelationshipIRI().createRelationshipIRI(f.createIRI(ENTITY.toString(), ent1.getId()), rel, f.createIRI(ENTITY.toString(), ent2.getId()));
+			Relationship rel = genRel.generate(ent1.getNamespace().toLowerCase() + ent2.getNamespace().toLowerCase());
+			
+			new CreateRelationshipIRI().createRelationshipIRI(ent1, rel, ent2);
 		}
 		
 	}
