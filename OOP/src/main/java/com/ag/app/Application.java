@@ -24,7 +24,7 @@ public class Application {
 		
 		System.out.println("Start generating data");
 		
-		for (int i = 0; i < nentity.length; i++) {
+		for (int i = 0; i < nentity.length-1; i++) {
 			atdb.addEntity(nentity[i]);
 			atdb.addRelationship(nrel[i]);
 			

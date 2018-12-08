@@ -34,17 +34,26 @@ public class DoQuery {
 	
 	private static String q3 = "select ?link "
 			+ "where { "
-			+ "oop:Entity2 oop:link ?link . "
+			+ "?s oop:link ?link . "
+			+ "?s oop:label ?name . "
+			+ "?s rdf:type oop:Event . "
+			+ "FILTER(regex(str(?name), \"Open Doors on Astronomy 2018\", \"i\"))"
 			+ " }";
 	
-	private static String q4 = "select ?label "
+	private static String q4 = "select ?description "
 			+ "where { "
-			+ "oop:Entity5 oop:label ?label . "
+			+ "?s oop:description ?description . "
+			+ "?s oop:label ?name . "
+			+ "?s rdf:type oop:Location . "
+			+ "FILTER(regex(str(?name), \"European Fecal Standards and Measurements\", \"i\"))"
 			+ " }";
 	
-	private static String q5 = "select ?label "
+	private static String q5 = "select ?headquarter "
 			+ "where { "
-			+ "oop:Entity22 oop:label ?label . "
+			+ "?s oop:headquarter ?headquarter . "
+			+ "?s oop:label ?name . "
+			+ "?s rdf:type oop:Organization . "
+			+ "FILTER(regex(str(?name), \"International Organization for Migration (IOM)\", \"i\"))"
 			+ " }";
 	
 	private static String q6 = "select ?label "
@@ -84,7 +93,7 @@ public class DoQuery {
 			+ "?s oop:headquarter ?headquarter . "
 			+ " }";
 	
-	private static String q10 = "select ?label "
+	private static String q10 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?rel oop:name ?name . "
@@ -95,7 +104,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?name), \"have\", \"i\"))"
 			+ " }";
 	
-	private static String q11 = "select ?label "
+	private static String q11 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?rel oop:name ?name . "
@@ -106,7 +115,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?name), \"hold in\", \"i\"))"
 			+ " }";
 	
-	private static String q12 = "select ?label "
+	private static String q12 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?o oop:label ?label . "
@@ -118,7 +127,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?time), \"2000\") || regex(str(?name), \"visit\", \"i\"))"
 			+ " }";
 	
-	private static String q13 = "select ?label "
+	private static String q13 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?s rdf:type oop:Organization . "
@@ -130,7 +139,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?time), \"2009\") || regex(str(?name), \"held\", \"i\"))"
 			+ " }";
 	
-	private static String q14 = "select ?label "
+	private static String q14 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?s rdf:type oop:Event . "
@@ -142,7 +151,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?time), \"2010\") || regex(str(?name), \"held in\", \"i\"))"
 			+ " }";
 	
-	private static String q15 = "select ?label "
+	private static String q15 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?s oop:label ?label . "
@@ -153,7 +162,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?name), \"in the same country\", \"i\"))"
 			+ " }";
 	
-	private static String q16 = "select ?label "
+	private static String q16 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?s rdf:type oop:Person . "
@@ -164,7 +173,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?name), \"work in\", \"i\"))"
 			+ " }";
 	
-	private static String q17 = "select ?label "
+	private static String q17 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?s rdf:type oop:Person . "
@@ -176,7 +185,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?name), \"live in\", \"i\"))"
 			+ " }";
 	
-	private static String q18 = "select ?label "
+	private static String q18 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?s rdf:type oop:Location . "
@@ -187,7 +196,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?name), \"in same country with\", \"i\"))"
 			+ " }";
 	
-	private static String q19 = "select ?headquarter "
+	private static String q19 = "select distinct ?headquarter "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?s oop:headquarter ?headquarter . "
@@ -198,7 +207,7 @@ public class DoQuery {
 			+ "FILTER(regex(str(?name), \"in the same country\", \"i\"))"
 			+ " }";
 	
-	private static String q20 = "select ?label "
+	private static String q20 = "select distinct ?label "
 			+ "where { "
 			+ "?s ?rel ?o . "
 			+ "?s rdf:type oop:Event . "
