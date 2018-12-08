@@ -4,3 +4,5 @@ is mom of
 is brother of
 is sister of
 is neighbour of
+agree with
+meet

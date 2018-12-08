@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import com.ag.entity.*;
@@ -37,48 +38,73 @@ public class GenRelationship {
 	private List<String> personlocation = new ArrayList<>(rf.readFile("data/relationship/personlocation.txt"));
 	private List<String> personorganization = new ArrayList<>(rf.readFile("data/relationship/personorganization.txt"));
 	private List<String> personperson = new ArrayList<>(rf.readFile("data/relationship/personperson.txt"));
-	private HashMap<String, List<String>> listName = new HashMap<>();
-	private List<String> nameList = new ArrayList<>();
 	
 	public GenRelationship() throws IOException {
 		// TODO Auto-generated constructor stub
-		listName.put("countryevent", countryevent);
-		listName.put("countryperson", countryperson);
-		listName.put("eventcountry", eventcountry);
-		listName.put("eventevent", eventevent);
-		listName.put("eventlocation", eventlocation);
-		listName.put("eventorganization", eventorganization);
-		listName.put("eventperson", eventperson);
-		listName.put("locationevent", locationevent);
-		listName.put("locationperson", locationperson);
-		listName.put("organizationevent", organizationevent);
-		listName.put("organizationperson", organizationperson);
-		listName.put("personcountry", personcountry);
-		listName.put("personevent", personevent);
-		listName.put("personlocation", personlocation);
-		listName.put("personorganization", personorganization);
-		listName.put("personperson", personperson);
-		listName.put("countrycountry", countrycountry);
-		listName.put("countrylocation", countrylocation);
-		listName.put("countryorganization", countryorganization);
-		listName.put("locationcountry", locationcountry);
-		listName.put("locationlocation", locationlocation);
-		listName.put("locationorganization", locationorganization);
-		listName.put("organizationcountry", organizationcountry);
-		listName.put("organizationlocation", organizationlocation);
-		listName.put("organizationorganization", organizationorganization);
 	}
-		
-	public String getRandomName(List<String> list_name) {
+	
+	public String getRandomName(String flag) {
 		Random rd = new Random();
-		int index = rd.nextInt(list_name.size());
-		return list_name.get(index);
+		switch(flag) {
+			case "countrycountry":;
+				return countrycountry.get(rd.nextInt(countrycountry.size()));
+			case "countryevent":
+				return countryevent.get(rd.nextInt(countryevent.size()));
+			case "countrylocation":
+				return countrylocation.get(rd.nextInt(countrylocation.size()));
+			case "countryorganization":
+				return countryorganization.get(rd.nextInt(countryorganization.size()));
+			case "countryperson":
+				return countryperson.get(rd.nextInt(countryperson.size()));
+			case "eventcountry":
+				return eventcountry.get(rd.nextInt(eventcountry.size()));
+			case "eventevent":
+				return eventevent.get(rd.nextInt(eventevent.size()));
+			case "eventlocation":
+				return eventlocation.get(rd.nextInt(eventlocation.size()));
+			case "eventorganization":
+				return eventorganization.get(rd.nextInt(eventorganization.size()));
+			case "eventperson":
+				return eventperson.get(rd.nextInt(eventperson.size()));
+			case "locationcountry":
+				return locationcountry.get(rd.nextInt(locationcountry.size()));
+			case "locationevent":
+				return locationevent.get(rd.nextInt(locationevent.size()));
+			case "locationlocation":
+				return locationlocation.get(rd.nextInt(locationlocation.size()));
+			case "locationorganization":
+				return locationorganization.get(rd.nextInt(locationorganization.size()));
+			case "locationperson":
+				return locationperson.get(rd.nextInt(locationperson.size()));
+			case "organizationcountry":
+				return organizationcountry.get(rd.nextInt(organizationcountry.size()));
+			case "organizationevent":
+				return organizationevent.get(rd.nextInt(organizationevent.size()));
+			case "organizationlocation":
+				return organizationlocation.get(rd.nextInt(organizationlocation.size()));
+			case "organizationorganization":
+				return organizationorganization.get(rd.nextInt(organizationorganization.size()));
+			case "organizationperson":
+				return organizationperson.get(rd.nextInt(organizationperson.size()));
+			case "personcountry":
+				return personcountry.get(rd.nextInt(personcountry.size()));
+			case "personevent":
+				return personevent.get(rd.nextInt(personevent.size()));
+			case "personlocation":
+				return personlocation.get(rd.nextInt(personlocation.size()));
+			case "personorganization":
+				return personorganization.get(rd.nextInt(personorganization.size()));
+			case "personperson":
+				return personperson.get(rd.nextInt(personperson.size()));
+			default:
+				return null;
+		}
 	}
 	
 	public Relationship generate(String flag) throws IOException {
 		// TODO Auto-generated method stub		
 		Relationship rel = new Relationship();
-		String name = getRandomName(listName.get(flag));
+		String name = getRandomName(flag);
 		
 		return new Relationship(rel.getRandomId(), name, rel.getRandomTime(), new Entity().getRandomSource());
 	}

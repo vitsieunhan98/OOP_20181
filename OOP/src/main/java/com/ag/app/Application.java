@@ -19,8 +19,8 @@ public class Application {
 		ConnectDB cdb = new ConnectDB();
 		AGRepositoryConnection conn = cdb.connectDB().getConnection();
 		
-		int[] nentity = {100, 4900, 55000, 140000};
-		int[] nrel = {200, 6800, 73000, 120000};
+		int[] nentity = {100, 4900, 55000, 340000};
+		int[] nrel = {200, 6800, 73000, 420000};
 		
 		System.out.println("Start generating data");
 		

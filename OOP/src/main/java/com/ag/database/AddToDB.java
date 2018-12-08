@@ -33,7 +33,8 @@ public class AddToDB extends ConnectDB {
 			IRI ent1 = listIRIEntity.get((int) (Math.random() * listIRIEntity.size() + 0));
 			IRI ent2 = listIRIEntity.get((int) (Math.random() * listIRIEntity.size() + 0));
 			
-			Relationship rel = genRel.generate(ent1.getNamespace().toLowerCase() + ent2.getNamespace().toLowerCase());
+			String s = ent1.getLocalName().toLowerCase() + ent2.getLocalName().toLowerCase();
+			Relationship rel = genRel.generate(s.replaceAll("\\d", ""));
 			
 			new CreateRelationshipIRI().createRelationshipIRI(ent1, rel, ent2);
 		}
