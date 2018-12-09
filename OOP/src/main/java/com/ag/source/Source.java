@@ -1,4 +1,4 @@
-package com.ag.entity;
+package com.ag.source;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,6 +13,23 @@ public class Source {
 	private String time_extracted;
 	private List<String> list_link = new ArrayList<String>(new ReadFile().readFile("data/source/link.txt"));
 	private List<String> list_time_extracted = new ArrayList<String>(new ReadFile().readFile("data/source/timeExtracted.txt"));
+
+	public Source(String link, String time_extracted) throws IOException {
+		this.link = link;
+		this.time_extracted = time_extracted;
+	}
+	
+	public String getRandomLink() {
+		Random rd = new Random();
+		int index = rd.nextInt(list_link.size());
+		return list_link.get(index);
+	}
+	
+	public String getRandomTimeExtracted() {
+		Random rd = new Random();
+		int index = rd.nextInt(list_time_extracted.size());
+		return list_time_extracted.get(index);
+	}
 	
 	public String getLink() {
 		return link;
@@ -31,24 +48,6 @@ public class Source {
 	}
 	
 	public Source() throws IOException {
-		super();
 		// TODO Auto-generated constructor stub
-	}
-
-	public Source(String link, String time_extracted) throws IOException {
-		this.link = link;
-		this.time_extracted = time_extracted;
-	}
-	
-	public String getRandomLink() {
-		Random rd = new Random();
-		int index = rd.nextInt(list_link.size());
-		return list_link.get(index);
-	}
-	
-	public String getRandomTimeExtracted() {
-		Random rd = new Random();
-		int index = rd.nextInt(list_time_extracted.size());
-		return list_time_extracted.get(index);
 	}
 }

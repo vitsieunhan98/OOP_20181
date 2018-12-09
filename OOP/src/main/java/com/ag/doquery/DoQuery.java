@@ -58,18 +58,18 @@ public class DoQuery {
 	
 	private static String q6 = "select ?label "
 			+ "where { "
-			+ "?s ?rel ?o . "
+			+ "?o ?rel ?s . "
 			+ "?o rdf:type oop:Country . "
 			+ "?o oop:label ?label . "
 			+ "?s oop:label \"Space Trip\" . "
 			+ "?s rdf:type oop:Event . "
 			+ "?rel oop:name ?name . "
-			+ "FILTER(regex(str(?name), \"hold\", \"i\"))"
+			+ "FILTER(regex(str(?name), \"held\", \"i\"))"
 			+ " }";
 	
 	private static String q7 = "select ?label "
 			+ "where { "
-			+ "?s ?rel ?o . "
+			+ "?o ?rel ?s . "
 			+ "?o rdf:type oop:Country . "
 			+ "?s oop:label \"Renae Ratledge\" . "
 			+ "?s oop:position \"Dentists\" . "
@@ -112,7 +112,7 @@ public class DoQuery {
 			+ "?s rdf:type oop:Event . "
 			+ "?o oop:label \"South Park Church\" . "
 			+ "?o rdf:type oop:Location . "
-			+ "FILTER(regex(str(?name), \"hold in\", \"i\"))"
+			+ "FILTER(regex(str(?name), \"held in\", \"i\"))"
 			+ " }";
 	
 	private static String q12 = "select distinct ?label "

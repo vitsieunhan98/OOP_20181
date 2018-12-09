@@ -24,7 +24,7 @@ public class Application {
 		
 		System.out.println("Start generating data");
 		
-		for (int i = 0; i < nentity.length-1; i++) {
+		for (int i = 0; i < nentity.length; i++) {
 			atdb.addEntity(nentity[i]);
 			atdb.addRelationship(nrel[i]);
 			
@@ -37,7 +37,7 @@ public class Application {
 //		System.out.println("Nhập số câu truy vấn bạn muốn thực hiện (1-20) : ");
 //		Scanner sc = new Scanner(System.in);
 //		int choice = sc.nextInt();
-//		if(choice == 1) {
+//		if(choice == 1 || choice == 4) {
 //			DoQuery.displayResult(conn, DoQuery.getQuery()[choice-1], "description");
 //		}
 //		else if(choice == 3 || choice == 8) {

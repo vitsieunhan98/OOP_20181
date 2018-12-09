@@ -52,7 +52,6 @@ public class ConnectDB {
 	}
 	
 	public void setNamespace() {
-		
 		LABEL = f.createIRI(NAMESPACE, "label");
 		DESCRIPTION = f.createIRI(NAMESPACE, "description");
 		TIME_EXTRACTED = f.createIRI(NAMESPACE, "time_extracted");
@@ -69,67 +68,6 @@ public class ConnectDB {
 		LOCATION = f.createIRI(NAMESPACE, "Location");
 		ORGANIZATION = f.createIRI(NAMESPACE, "Organization");
 		RELATIONSHIP = f.createIRI(NAMESPACE, "Relationship");
-		
-	}
-
-	public IRI getLABEL() {
-		return LABEL;
-	}
-
-	public IRI getDESCRIPTION() {
-		return DESCRIPTION;
-	}
-
-	public IRI getTIME_EXTRACTED() {
-		return TIME_EXTRACTED;
-	}
-
-	public IRI getLINK() {
-		return LINK;
-	}
-
-	public IRI getPOSITION() {
-		return POSITION;
-	}
-
-	public IRI getHEADQUARTER() {
-		return HEADQUARTER;
-	}
-
-	public IRI getPERSON() {
-		return PERSON;
-	}
-
-	public IRI getCOUNTRY() {
-		return COUNTRY;
-	}
-
-	public IRI getEVENT() {
-		return EVENT;
-	}
-
-	public IRI getLOCATION() {
-		return LOCATION;
-	}
-
-	public IRI getORGANIZATION() {
-		return ORGANIZATION;
-	}
-
-	public IRI getRELATIONSHIP() {
-		return RELATIONSHIP;
-	}
-
-	public IRI getTIME() {
-		return TIME;
-	}
-
-	public IRI getENTITY() {
-		return ENTITY;
-	}
-
-	public IRI getNAME() {
-		return NAME;
 	}
 	
 }

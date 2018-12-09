@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.ag.handlefile.ReadFile;
+import com.ag.source.Source;
 
 public class Location extends Entity {
 	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/location/locationLabel.txt"));

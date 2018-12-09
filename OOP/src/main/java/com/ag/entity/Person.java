@@ -7,25 +7,15 @@ import java.util.List;
 import java.util.Random;
 
 import com.ag.handlefile.ReadFile;
+import com.ag.source.Source;
 
 public class Person extends Entity {
 	private String postion;
 	private List<String> list_position = new ArrayList<String>(new ReadFile().readFile("data/person/personPosition.txt"));
 	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/person/personLabel.txt"));
 	
-	public Person() throws IOException {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	public Person(String id, String description, Source source, String postion, String label) throws IOException{
 		super(id, description, source, label);
-		this.postion = postion;
-	}
-	public String getPostion() {
-		return postion;
-	}
-	
-	public void setPostion(String postion) {
 		this.postion = postion;
 	}
 	
@@ -39,5 +29,17 @@ public class Person extends Entity {
 		Random rd = new Random();
 		int index = rd.nextInt(list_label.size());
 		return list_label.get(index);
+	}
+	
+	public String getPostion() {
+		return postion;
+	}
+	
+	public void setPostion(String postion) {
+		this.postion = postion;
+	}
+	
+	public Person() throws IOException {
+		// TODO Auto-generated constructor stub
 	}
 }

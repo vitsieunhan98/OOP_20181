@@ -7,6 +7,8 @@ import org.eclipse.rdf4j.model.IRI;
 
 import com.ag.entity.*;
 import com.ag.generate.*;
+import com.ag.relationship.GenRelationship;
+import com.ag.relationship.Relationship;
 import com.franz.agraph.repository.AGRepository;
 
 public class AddToDB extends ConnectDB {

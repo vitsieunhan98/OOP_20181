@@ -11,6 +11,7 @@ import org.eclipse.rdf4j.repository.RepositoryException;
 import com.franz.agraph.repository.AGRepository;
 import com.ag.entity.*;
 import com.ag.generate.GenEntity;
+import com.ag.relationship.Relationship;
 
 public class CreateRelationshipIRI extends ConnectDB {
 

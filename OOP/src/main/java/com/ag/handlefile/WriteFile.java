@@ -10,7 +10,7 @@ public class WriteFile {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public static void writeFile(String file, String data) throws IOException {
+	public void writeFile(String file, String data) throws IOException {
 	     File f = new File(file);
 	     FileWriter fw = new FileWriter(f);
 
