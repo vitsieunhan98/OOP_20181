@@ -6,5 +6,5 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 
 public interface ICreateIRI<T> {
-	public IRI createIRI(T et, Model model) throws IOException;
+	public IRI createIRI(T et) throws IOException;
 }

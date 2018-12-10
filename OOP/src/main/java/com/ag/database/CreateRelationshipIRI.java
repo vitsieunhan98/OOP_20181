@@ -20,7 +20,7 @@ public class CreateRelationshipIRI extends ConnectDB {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void createRelationshipIRI(IRI et1, Relationship rel, IRI et2, Model model) {
+	public void createRelationshipIRI(IRI et1, Relationship rel, IRI et2) {
 		// TODO Auto-generated method stub
 		IRI relationship = f.createIRI(RELATIONSHIP.toString(), rel.getId());
 		

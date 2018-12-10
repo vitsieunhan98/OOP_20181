@@ -18,7 +18,7 @@ public class CreatePersonIRI extends ConnectDB implements ICreateIRI<Person>{
 	}
 
 	@Override
-	public IRI createIRI(Person et, Model model) {
+	public IRI createIRI(Person et) {
 		// TODO Auto-generated method stub
 		
 		IRI person = f.createIRI(PERSON.toString(), et.getId());

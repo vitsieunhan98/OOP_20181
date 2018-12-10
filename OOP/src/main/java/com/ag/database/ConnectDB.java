@@ -35,35 +35,16 @@ public class ConnectDB {
 	protected IRI RELATIONSHIP;
 	protected IRI NAME;
 	
-	protected AGRepository myRepo;
-	protected ValueFactory f;
-	protected AGRepositoryConnection conn;
-	private Model model1, model2, model3, model4;
-	private Model[] model = {model1, model2, model3, model4};
+	protected AGRepository myRepo = connectDB();
+	protected ValueFactory f = myRepo.getValueFactory();
+	public static Model model = new TreeModel();
 	
 	public ConnectDB() {
 		// TODO Auto-generated constructor stub
-		myRepo = connectDB();
-		f = myRepo.getValueFactory();
-		conn = myRepo.getConnection();
-		model1 = new TreeModel();
-		model2 = new TreeModel();
-		model3 = new TreeModel();
-		model4 = new TreeModel();
 		setNamespace();
 		
 	}
-
-	public Model[] getModel() {
-		return model;
-	}
 	
-	public void setModel(Model[] model) {
-		this.model = model;
-	}
-
-
-
 	public static AGRepository connectDB() {
 		AGServer sv = new AGServer(SERVER_URL, USERNAME, PASSWORD);
 		AGCatalog catalog = sv.getCatalog(CATALOG_ID);

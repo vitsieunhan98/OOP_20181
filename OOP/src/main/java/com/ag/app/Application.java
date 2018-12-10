@@ -3,6 +3,8 @@ package com.ag.app;
 import java.io.IOException;
 import java.util.Scanner;
 
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.impl.TreeModel;
 import org.eclipse.rdf4j.query.QueryLanguage;
 import org.eclipse.rdf4j.query.TupleQuery;
 import org.eclipse.rdf4j.query.TupleQueryResult;
@@ -18,18 +20,20 @@ public class Application {
 		AddToDB atdb = new AddToDB();
 		ConnectDB cdb = new ConnectDB();
 		AGRepositoryConnection conn = cdb.connectDB().getConnection();
-		
-		int[] nentity = {100, 4900, 55000, 340000};
-		int[] nrel = {200, 6800, 73000, 420000};
+		DoQuery dq = new DoQuery();
 		
 		System.out.println("Start generating data");
 		
-		for (int i = 0; i < nentity.length; i++) {
-			atdb.addEntity(nentity[i], atdb.getModel()[i]);
-			atdb.addRelationship(nrel[i], atdb.getModel()[i]);
-			conn.add(atdb.getModel()[i]);
-			DoQuery.doQuery(conn, i);
-			
+		for (int i = 1; i <= 80; i++) {
+			System.out.println("--------------------LOOP "+i+"-------------------");
+			atdb.addEntity(5000);
+			atdb.addRelationship(6250);
+			conn.add(atdb.model);
+			atdb.model.clear();
+			System.out.println("---------DONE---------");
+			if(i==1 || i==6 || i==20 || i==80) {
+				dq.doQuery(conn, i);
+			}
 		}
 		
 		System.out.println("Finish generating data");

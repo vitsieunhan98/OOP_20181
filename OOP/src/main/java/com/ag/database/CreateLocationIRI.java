@@ -17,7 +17,7 @@ public class CreateLocationIRI extends ConnectDB implements ICreateIRI<Location>
 	}
 
 	@Override
-	public IRI createIRI(Location et, Model model) {
+	public IRI createIRI(Location et) {
 		// TODO Auto-generated method stub
 		
 		IRI location = f.createIRI(LOCATION.toString(), et.getId());

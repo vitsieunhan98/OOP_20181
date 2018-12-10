@@ -17,7 +17,7 @@ public class CreateOrganizationIRI extends ConnectDB implements ICreateIRI<Organ
 	}
 
 	@Override
-	public IRI createIRI(Organization et, Model model) {
+	public IRI createIRI(Organization et) {
 		// TODO Auto-generated method stub
 		
 		IRI organization = f.createIRI(ORGANIZATION.toString(), et.getId());

@@ -17,7 +17,7 @@ public class CreateEventIRI extends ConnectDB implements ICreateIRI<Event>{
 	}
 
 	@Override
-	public IRI createIRI(Event et, Model model) {
+	public IRI createIRI(Event et) {
 		// TODO Auto-generated method stub
 		
 		IRI event = f.createIRI(EVENT.toString(), et.getId());

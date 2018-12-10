@@ -12,22 +12,22 @@ public class CreateEntityIRI extends ConnectDB implements ICreateIRI<Entity>{
 	}
 
 	@Override
-	public IRI createIRI(Entity et, Model model) {
+	public IRI createIRI(Entity et) {
 		// TODO Auto-generated method stub
 		if(et instanceof Person) {
-			return new CreatePersonIRI().createIRI((Person) et, model);
+			return new CreatePersonIRI().createIRI((Person) et);
 		}
 		else if(et instanceof Organization) {
-			return new CreateOrganizationIRI().createIRI((Organization) et, model);
+			return new CreateOrganizationIRI().createIRI((Organization) et);
 		}
 		else if(et instanceof Event) {
-			return new CreateEventIRI().createIRI((Event) et, model);
+			return new CreateEventIRI().createIRI((Event) et);
 		}
 		else if(et instanceof Location) {
-			return new CreateLocationIRI().createIRI((Location) et, model);
+			return new CreateLocationIRI().createIRI((Location) et);
 		}
 		else if(et instanceof Country) {
-			return new CreateCountryIRI().createIRI((Country) et, model);
+			return new CreateCountryIRI().createIRI((Country) et);
 		}
 		return null;
 	}
