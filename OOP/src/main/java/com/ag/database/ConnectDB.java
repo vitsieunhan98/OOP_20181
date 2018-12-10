@@ -37,7 +37,7 @@ public class ConnectDB {
 	
 	protected AGRepository myRepo = connectDB();
 	protected ValueFactory f = myRepo.getValueFactory();
-	public static Model model = new TreeModel();
+	protected static Model model = new TreeModel();
 	
 	public ConnectDB() {
 		// TODO Auto-generated constructor stub
@@ -45,6 +45,10 @@ public class ConnectDB {
 		
 	}
 	
+	public static Model getModel() {
+		return model;
+	}
+
 	public static AGRepository connectDB() {
 		AGServer sv = new AGServer(SERVER_URL, USERNAME, PASSWORD);
 		AGCatalog catalog = sv.getCatalog(CATALOG_ID);

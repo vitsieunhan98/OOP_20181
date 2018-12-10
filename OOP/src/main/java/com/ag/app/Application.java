@@ -25,17 +25,16 @@ public class Application {
 		System.out.println("Start generating data");
 		
 		for (int i = 1; i <= 80; i++) {
-			System.out.println("--------------------LOOP "+i+"-------------------");
 			atdb.addEntity(5000);
 			atdb.addRelationship(6250);
-			conn.add(atdb.model);
-			atdb.model.clear();
-			System.out.println("---------DONE---------");
+			conn.add(atdb.getModel());
+			atdb.getModel().clear();
 			if(i==1 || i==6 || i==20 || i==80) {
 				dq.doQuery(conn, i);
 			}
 		}
 		
+		conn.close();
 		System.out.println("Finish generating data");
 		
 //		System.out.println("Nhập số câu truy vấn bạn muốn thực hiện (1-20) : ");

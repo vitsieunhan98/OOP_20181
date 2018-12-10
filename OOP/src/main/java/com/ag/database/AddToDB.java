@@ -16,11 +16,6 @@ import com.franz.agraph.repository.AGRepository;
 public class AddToDB extends ConnectDB {
 
 	private List<IRI> listIRIEntity;
-//	private Model model1 = new TreeModel();
-//	private Model model2 = new TreeModel();
-//	private Model model3 = new TreeModel();
-//	private Model model4 = new TreeModel();
-//	private Model[] model = new Model[] {model1, model2, model3, model4};
 	private GenRelationship genRel;
 	private GenEntity genEn;
 	private CreateEntityIRI crEnIRI;
@@ -33,15 +28,10 @@ public class AddToDB extends ConnectDB {
 		crEnIRI = new CreateEntityIRI();
 	}
 	
-//	public Model[] getModel() {
-//		return model;
-//	}
-	
 	public void addEntity(int numberOfEntity) throws IOException {
 		for(int i=0; i<numberOfEntity; i++) {
 			Entity et = genEn.generate();
 			listIRIEntity.add(crEnIRI.createIRI(et));
-			System.out.println("done entity " + i);
 		}
 	}
 	
@@ -54,7 +44,6 @@ public class AddToDB extends ConnectDB {
 			Relationship rel = genRel.generate(s.replaceAll("\\d", ""));
 			
 			new CreateRelationshipIRI().createRelationshipIRI(ent1, rel, ent2);
-			System.out.println("done rel " + i);
 		}
 	}
 }
