@@ -10,10 +10,9 @@ import com.ag.handlefile.ReadFile;
 import com.ag.source.Source;
 
 public class Country extends Entity {
-	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/country/countryLabel.txt"));
+	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/country/countryLabel.txt"));;
 	
 	public Country() throws IOException {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 

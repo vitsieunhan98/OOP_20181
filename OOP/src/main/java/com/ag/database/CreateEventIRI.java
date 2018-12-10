@@ -26,11 +26,11 @@ public class CreateEventIRI extends ConnectDB implements ICreateIRI<Event>{
 		Literal link = f.createLiteral(et.getSource().getLink());
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
 		
-		conn.add(event, RDF.TYPE, EVENT);
-		conn.add(event, LABEL, label);
-		conn.add(event, DESCRIPTION, description);
-		conn.add(event, TIME_EXTRACTED, time_extracted);
-		conn.add(event, LINK, link);
+		model.add(event, RDF.TYPE, EVENT);
+		model.add(event, LABEL, label);
+		model.add(event, DESCRIPTION, description);
+		model.add(event, TIME_EXTRACTED, time_extracted);
+		model.add(event, LINK, link);
 		
 		return event;
 	}

@@ -27,12 +27,12 @@ public class CreateOrganizationIRI extends ConnectDB implements ICreateIRI<Organ
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
 		Literal headquarter = f.createLiteral(et.getHeadquarter());
 		
-		conn.add(organization, RDF.TYPE, ORGANIZATION);
-		conn.add(organization, LABEL, label);
-		conn.add(organization, DESCRIPTION, description);
-		conn.add(organization, TIME_EXTRACTED, time_extracted);
-		conn.add(organization, LINK, link);
-		conn.add(organization, HEADQUARTER, headquarter);
+		model.add(organization, RDF.TYPE, ORGANIZATION);
+		model.add(organization, LABEL, label);
+		model.add(organization, DESCRIPTION, description);
+		model.add(organization, TIME_EXTRACTED, time_extracted);
+		model.add(organization, LINK, link);
+		model.add(organization, HEADQUARTER, headquarter);
 		
 		return organization;
 	}

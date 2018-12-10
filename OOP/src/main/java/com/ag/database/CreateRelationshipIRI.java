@@ -28,11 +28,11 @@ public class CreateRelationshipIRI extends ConnectDB {
 		Literal link = f.createLiteral(rel.getSource().getLink());
 		Literal time_extracted = f.createLiteral(rel.getSource().getTime_extracted());
 		
-		conn.add(et1, relationship, et2);
-		conn.add(relationship, NAME, name);
-		conn.add(relationship, TIME, time);
-		conn.add(relationship, LINK, link);
-		conn.add(relationship, TIME_EXTRACTED, time_extracted);
+		model.add(et1, relationship, et2);
+		model.add(relationship, NAME, name);
+		model.add(relationship, TIME, time);
+		model.add(relationship, LINK, link);
+		model.add(relationship, TIME_EXTRACTED, time_extracted);
 	}
 	
 }

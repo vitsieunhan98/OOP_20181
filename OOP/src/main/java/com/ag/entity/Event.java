@@ -10,10 +10,9 @@ import com.ag.handlefile.ReadFile;
 import com.ag.source.Source;
 
 public class Event extends Entity {
-	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/event/eventLabel.txt"));
+	private List<String> list_label = new ArrayList<String>(new ReadFile().readFile("data/event/eventLabel.txt"));;
 	
 	public Event() throws IOException {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 

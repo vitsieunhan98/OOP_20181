@@ -31,6 +31,7 @@ public class Application {
 			DoQuery.doQuery(conn, i);
 			
 		}
+		atdb.addModel();
 		
 		System.out.println("Finish generating data");
 		

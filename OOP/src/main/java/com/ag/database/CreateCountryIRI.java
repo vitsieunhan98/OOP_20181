@@ -2,7 +2,9 @@ package com.ag.database;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.util.ModelBuilder;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 
 import com.ag.entity.Country;
@@ -25,13 +27,14 @@ public class CreateCountryIRI extends ConnectDB implements ICreateIRI<Country>{
 		Literal link = f.createLiteral(et.getSource().getLink());
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
 		
-		conn.add(country, RDF.TYPE, COUNTRY);
-		conn.add(country, LABEL, label);
-		conn.add(country, DESCRIPTION, description);
-		conn.add(country, TIME_EXTRACTED, time_extracted);
-		conn.add(country, LINK, link);
+		model.add(country, RDF.TYPE, COUNTRY);
+		model.add(country, LABEL, label);
+		model.add(country, DESCRIPTION, description);
+		model.add(country, TIME_EXTRACTED, time_extracted);
+		model.add(country, LINK, link);
 		
 		return country;
+		
 	}
 
 }

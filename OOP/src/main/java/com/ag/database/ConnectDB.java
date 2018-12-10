@@ -1,7 +1,9 @@
 package com.ag.database;
 
 import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.TreeModel;
 
 import com.franz.agraph.repository.AGCatalog;
 import com.franz.agraph.repository.AGRepository;
@@ -33,14 +35,19 @@ public class ConnectDB {
 	protected IRI RELATIONSHIP;
 	protected IRI NAME;
 	
-	AGRepository myRepo = connectDB();
-	ValueFactory f = myRepo.getValueFactory();
-	AGRepositoryConnection conn = myRepo.getConnection();
+	AGRepository myRepo;
+	ValueFactory f;
+	AGRepositoryConnection conn;
+	Model model;
 	
 	public ConnectDB() {
-		super();
 		// TODO Auto-generated constructor stub
+		myRepo = connectDB();
+		f = myRepo.getValueFactory();
+		conn = myRepo.getConnection();
+		model = new TreeModel();
 		setNamespace();
+		
 	}
 
 	public static AGRepository connectDB() {

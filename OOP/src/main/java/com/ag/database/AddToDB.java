@@ -40,6 +40,9 @@ public class AddToDB extends ConnectDB {
 			
 			new CreateRelationshipIRI().createRelationshipIRI(ent1, rel, ent2);
 		}
-		
+	}
+	
+	public void addModel() {
+		conn.add(model);
 	}
 }

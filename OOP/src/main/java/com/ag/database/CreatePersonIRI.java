@@ -28,12 +28,12 @@ public class CreatePersonIRI extends ConnectDB implements ICreateIRI<Person>{
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
 		Literal position = f.createLiteral(et.getPostion());
 		
-		conn.add(person, RDF.TYPE, PERSON);
-		conn.add(person, LABEL, label);
-		conn.add(person, DESCRIPTION, description);
-		conn.add(person, TIME_EXTRACTED, time_extracted);
-		conn.add(person, LINK, link);
-		conn.add(person, POSITION, position);
+		model.add(person, RDF.TYPE, PERSON);
+		model.add(person, LABEL, label);
+		model.add(person, DESCRIPTION, description);
+		model.add(person, TIME_EXTRACTED, time_extracted);
+		model.add(person, LINK, link);
+		model.add(person, POSITION, position);
 		
 		return person;
 	}

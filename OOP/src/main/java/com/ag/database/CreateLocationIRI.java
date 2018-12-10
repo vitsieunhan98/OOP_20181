@@ -26,11 +26,11 @@ public class CreateLocationIRI extends ConnectDB implements ICreateIRI<Location>
 		Literal link = f.createLiteral(et.getSource().getLink());
 		Literal time_extracted = f.createLiteral(et.getSource().getTime_extracted());
 		
-		conn.add(location, RDF.TYPE, LOCATION);
-		conn.add(location, LABEL, label);
-		conn.add(location, DESCRIPTION, description);
-		conn.add(location, TIME_EXTRACTED, time_extracted);
-		conn.add(location, LINK, link);
+		model.add(location, RDF.TYPE, LOCATION);
+		model.add(location, LABEL, label);
+		model.add(location, DESCRIPTION, description);
+		model.add(location, TIME_EXTRACTED, time_extracted);
+		model.add(location, LINK, link);
 		
 		return location;
 	}
