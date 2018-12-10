@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Model;
 
 import com.ag.entity.*;
 import com.ag.generate.*;
@@ -20,16 +21,16 @@ public class AddToDB extends ConnectDB {
 		listIRIEntity = new ArrayList<>();
 	}
 	
-	public void addEntity(int numberOfEntity) throws IOException {
+	public void addEntity(int numberOfEntity, Model model) throws IOException {
 		GenEntity genEn = new GenEntity();
 		CreateEntityIRI crEnIRI = new CreateEntityIRI();
 		for(int i=0; i<numberOfEntity; i++) {
 			Entity et = genEn.generate();
-			listIRIEntity.add(crEnIRI.createIRI(et));
+			listIRIEntity.add(crEnIRI.createIRI(et, model));
 		}
 	}
 	
-	public void addRelationship(int numberOfRelationship) throws IOException {
+	public void addRelationship(int numberOfRelationship, Model model) throws IOException {
 		GenRelationship genRel = new GenRelationship();
 		for(int i=0; i<numberOfRelationship; i++) {
 			IRI ent1 = listIRIEntity.get((int) (Math.random() * listIRIEntity.size() + 0));
@@ -38,11 +39,7 @@ public class AddToDB extends ConnectDB {
 			String s = ent1.getLocalName().toLowerCase() + ent2.getLocalName().toLowerCase();
 			Relationship rel = genRel.generate(s.replaceAll("\\d", ""));
 			
-			new CreateRelationshipIRI().createRelationshipIRI(ent1, rel, ent2);
+			new CreateRelationshipIRI().createRelationshipIRI(ent1, rel, ent2, model);
 		}
-	}
-	
-	public void addModel() {
-		conn.add(model);
 	}
 }

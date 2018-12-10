@@ -18,7 +18,7 @@ public class CreateCountryIRI extends ConnectDB implements ICreateIRI<Country>{
 	}
 
 	@Override
-	public IRI createIRI(Country et) {
+	public IRI createIRI(Country et, Model model) {
 		// TODO Auto-generated method stub
 		IRI country = f.createIRI(COUNTRY.toString(), et.getId());
 		

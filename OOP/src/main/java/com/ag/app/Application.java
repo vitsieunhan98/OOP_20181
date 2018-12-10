@@ -25,13 +25,12 @@ public class Application {
 		System.out.println("Start generating data");
 		
 		for (int i = 0; i < nentity.length; i++) {
-			atdb.addEntity(nentity[i]);
-			atdb.addRelationship(nrel[i]);
-			
+			atdb.addEntity(nentity[i], atdb.getModel()[i]);
+			atdb.addRelationship(nrel[i], atdb.getModel()[i]);
+			conn.add(atdb.getModel()[i]);
 			DoQuery.doQuery(conn, i);
 			
 		}
-		atdb.addModel();
 		
 		System.out.println("Finish generating data");
 		

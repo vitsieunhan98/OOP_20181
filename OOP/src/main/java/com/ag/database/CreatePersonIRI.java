@@ -2,6 +2,7 @@ package com.ag.database;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 
@@ -17,7 +18,7 @@ public class CreatePersonIRI extends ConnectDB implements ICreateIRI<Person>{
 	}
 
 	@Override
-	public IRI createIRI(Person et) {
+	public IRI createIRI(Person et, Model model) {
 		// TODO Auto-generated method stub
 		
 		IRI person = f.createIRI(PERSON.toString(), et.getId());

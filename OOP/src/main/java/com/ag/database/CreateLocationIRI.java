@@ -2,6 +2,7 @@ package com.ag.database;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 
@@ -16,7 +17,7 @@ public class CreateLocationIRI extends ConnectDB implements ICreateIRI<Location>
 	}
 
 	@Override
-	public IRI createIRI(Location et) {
+	public IRI createIRI(Location et, Model model) {
 		// TODO Auto-generated method stub
 		
 		IRI location = f.createIRI(LOCATION.toString(), et.getId());

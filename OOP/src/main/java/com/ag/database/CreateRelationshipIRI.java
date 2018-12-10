@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
@@ -19,7 +20,7 @@ public class CreateRelationshipIRI extends ConnectDB {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void createRelationshipIRI(IRI et1, Relationship rel, IRI et2) {
+	public void createRelationshipIRI(IRI et1, Relationship rel, IRI et2, Model model) {
 		// TODO Auto-generated method stub
 		IRI relationship = f.createIRI(RELATIONSHIP.toString(), rel.getId());
 		
