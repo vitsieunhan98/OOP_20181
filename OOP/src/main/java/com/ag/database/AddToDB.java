@@ -32,7 +32,6 @@ public class AddToDB extends ConnectDB {
 		for(int i=0; i<numberOfEntity; i++) {
 			Entity et = genEn.generate();
 			listIRIEntity.add(crEnIRI.createIRI(et));
-			System.out.println("ent " + i);
 		}
 	}
 	
@@ -45,7 +44,6 @@ public class AddToDB extends ConnectDB {
 			Relationship rel = genRel.generate(s.replaceAll("\\d", ""));
 			
 			new CreateRelationshipIRI().createRelationshipIRI(ent1, rel, ent2);
-			System.out.println("rel " + i);
 		}
 	}
 }
