@@ -234,6 +234,7 @@ public class DoQuery {
 		for(int i=0; i<20; i++) {
 			countTime(conn, query[i], i, title);
 		}
+					
 	}
 	
 	public void countTime(AGRepositoryConnection conn ,String query, int id, int title) throws IOException {

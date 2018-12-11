@@ -24,16 +24,18 @@ public class Application {
 		
 		System.out.println("Start generating data");
 		
-		for (int i = 1; i <= 80; i++) {
-			atdb.addEntity(5000);
-			atdb.addRelationship(6250);
+		for (int i = 1; i <= 800; i++) {
+			System.out.println("-------------LOOP " + i + "--------------");
+			atdb.addEntity(500);
+			atdb.addRelationship(625);
 			conn.add(atdb.getModel());
 			atdb.getModel().clear();
-			if(i==1 || i==6 || i==20 || i==80) {
+			System.out.println("-----------DONE LOOP " + i + "------------");
+			if(i==10 || i==60 || i==200 || i==800) {
 				dq.doQuery(conn, i);
 			}
+			
 		}
-		
 		conn.close();
 		System.out.println("Finish generating data");
 		
