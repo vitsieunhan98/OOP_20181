@@ -25,12 +25,10 @@ public class Application {
 		System.out.println("Start generating data");
 		
 		for (int i = 1; i <= 800; i++) {
-			System.out.println("-------------LOOP " + i + "--------------");
 			atdb.addEntity(500);
 			atdb.addRelationship(625);
 			conn.add(atdb.getModel());
 			atdb.getModel().clear();
-			System.out.println("-----------DONE LOOP " + i + "------------");
 			if(i==10 || i==60 || i==200 || i==800) {
 				dq.doQuery(conn, i);
 			}
