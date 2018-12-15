@@ -219,7 +219,57 @@ public class DoQuery {
 			+ "FILTER(regex(str(?name), \"is held by same organization\", \"i\") || regex(str(?time), \"2005\"))"
 			+ " }";
 	
-	private String[] query = new String[] {q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20};
+	private String q21 = "select ?s "
+			+ "where { "
+			+ "?s rdf:type oop:Event . "
+			+ " }";
+	
+	private String q22 = "select ?s "
+			+ "where { "
+			+ "?s rdf:type oop:Person . "
+			+ " }";
+	
+	private String q23 = "select ?s "
+			+ "where { "
+			+ "?s rdf:type oop:Organization . "
+			+ " }";
+	
+	private String q24 = "select ?s "
+			+ "where { "
+			+ "?s rdf:type oop:Location . "
+			+ " }";
+	
+	private String q25 = "select ?s "
+			+ "where { "
+			+ "?s rdf:type oop:Country . "
+			+ " }";
+	
+	private String q26 = "select ?s "
+			+ "where { "
+			+ "?s oop:label \"Italy World Food Programme\" . "
+			+ " }";
+	
+	private String q27 = "select ?s ?p ?o "
+			+ "where { "
+			+ "?s ?p ?o . "
+			+ " }";
+	
+	private String q28 = "select ?s "
+			+ "where { "
+			+ "?s oop:headquarter \"Paris, France\" . "
+			+ " }";
+	
+	private String q29 = "select ?s "
+			+ "where { "
+			+ "?s oop:link \"https://fa-ir.facebook.com/\" . "
+			+ " }";
+	
+	private String q30 = "select ?s ?o"
+			+ "where { "
+			+ "?s oop:Relationship25 ?o . "
+			+ " }";
+	
+	private String[] query = new String[] {q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26, q27, q28, q29, q30};
 	
 	public DoQuery() {
 		super();
@@ -231,7 +281,7 @@ public class DoQuery {
 	}
 
 	public void doQuery(AGRepositoryConnection conn, int title) throws IOException {
-		for(int i=0; i<20; i++) {
+		for(int i=0; i<30; i++) {
 			countTime(conn, query[i], i, title);
 		}
 					

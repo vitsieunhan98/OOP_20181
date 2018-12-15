@@ -24,12 +24,12 @@ public class Application {
 		
 		System.out.println("Start generating data");
 		
-		for (int i = 1; i <= 800; i++) {
-			atdb.addEntity(500);
-			atdb.addRelationship(625);
+		for (int i = 1; i <= 4000; i++) {
+			atdb.addEntity(100);
+			atdb.addRelationship(125);
 			conn.add(atdb.getModel());
 			atdb.getModel().clear();
-			if(i==10 || i==60 || i==200 || i==800) {
+			if(i==50 || i==300 || i==1000 || i==4000) {
 				dq.doQuery(conn, i);
 			}
 			
