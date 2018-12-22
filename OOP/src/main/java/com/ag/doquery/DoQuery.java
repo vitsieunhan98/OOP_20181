@@ -295,18 +295,51 @@ public class DoQuery {
 		new WriteFile().writeFile("result/q" + Integer.toString(id) + "-" + Integer.toString(title) + ".txt", Long.toString(delta/1000000));
 	}
 	
-//	public static void displayResult(AGRepositoryConnection conn ,String query, String title) {
-//		System.out.println("\nKết quả truy vấn \n");
-//		
-//		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
-//		TupleQueryResult result = tupleQuery.evaluate();
-//		
-//		while (result.hasNext()) {
-//            BindingSet bindingSet = result.next();
-//            Value rs = bindingSet.getValue(title);
-//            System.out.println(rs.stringValue());
-//        }
-//		
-//        result.close();
-//	}
+	public static void displayResult(AGRepositoryConnection conn ,String query, String title) {
+		System.out.println("\nKết quả truy vấn \n");
+		
+		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
+		TupleQueryResult result = tupleQuery.evaluate();
+		
+		while (result.hasNext()) {
+            BindingSet bindingSet = result.next();
+            Value rs = bindingSet.getValue(title);
+            System.out.println(rs.stringValue());
+        }
+		
+        result.close();
+	}
+	
+	public static void display27(AGRepositoryConnection conn ,String query) {
+		System.out.println("\nKết quả truy vấn \n");
+		
+		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
+		TupleQueryResult result = tupleQuery.evaluate();
+		
+		while (result.hasNext()) {
+            BindingSet bindingSet = result.next();
+            Value s = bindingSet.getValue("s");
+            Value p = bindingSet.getValue("p");
+            Value o = bindingSet.getValue("o");
+            System.out.println(s.stringValue() + " ---- " + p.stringValue() + " ---- " + o.stringValue());
+        }
+		
+        result.close();
+	}
+	
+	public static void display30(AGRepositoryConnection conn ,String query) {
+		System.out.println("\nKết quả truy vấn \n");
+		
+		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
+		TupleQueryResult result = tupleQuery.evaluate();
+		
+		while (result.hasNext()) {
+            BindingSet bindingSet = result.next();
+            Value rs1 = bindingSet.getValue("s");
+            Value rs2 = bindingSet.getValue("o");
+            System.out.println(rs1.stringValue() + " ---- " + rs2.stringValue());
+        }
+		
+        result.close();
+	}
 }
